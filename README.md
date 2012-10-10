@@ -16,7 +16,7 @@ This framework also contains more general (not MVVM-specific) additions to fix b
 
 ## Getting Started
 
-To start building the framework, clone this repository and then run `git submodule update --init --recursive`. This will automatically pull down any dependencies.
+To start building the framework, clone this repository and then run `script/bootstrap`. This will automatically pull down any dependencies.
 
 ## Contributing
 

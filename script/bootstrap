@@ -1,0 +1,6 @@
+#!/bin/sh
+# Ensure local dependencies are up to date.
+
+cd $(dirname "$0")/..
+
+git submodule update --init --recursive
