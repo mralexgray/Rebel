@@ -53,6 +53,7 @@
 		D0723FC615C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D0723FC415C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0723FC715C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FC515C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D0723FDC15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */; };
+		D0723FDE15C60D61004DBDC7 /* testimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0723FDD15C60D61004DBDC7 /* testimage.jpg */; };
 		D0723FE015C60E94004DBDC7 /* RBLViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FDF15C60E94004DBDC7 /* RBLViewSpec.m */; };
 		D0723FE315C616AF004DBDC7 /* RBLResizableImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D0723FE115C616AF004DBDC7 /* RBLResizableImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0723FE415C616AF004DBDC7 /* RBLResizableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FE215C616AF004DBDC7 /* RBLResizableImage.m */; };
@@ -205,6 +206,7 @@
 		D0723FC415C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+RBLCGColorAdditions.h"; sourceTree = "<group>"; };
 		D0723FC515C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+RBLCGColorAdditions.m"; sourceTree = "<group>"; };
 		D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+RBLCGColorAdditionsSpec.m"; sourceTree = "<group>"; };
+		D0723FDD15C60D61004DBDC7 /* testimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage.jpg; sourceTree = "<group>"; };
 		D0723FDF15C60E94004DBDC7 /* RBLViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLViewSpec.m; sourceTree = "<group>"; };
 		D0723FE115C616AF004DBDC7 /* RBLResizableImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLResizableImage.h; sourceTree = "<group>"; };
 		D0723FE215C616AF004DBDC7 /* RBLResizableImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLResizableImage.m; sourceTree = "<group>"; };
@@ -282,6 +284,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		304692E71607258E00B79746 /* libextobjc */ = {
+			isa = PBXGroup;
+			children = (
+				304692F11607259A00B79746 /* EXTKeyPathCoding.h */,
+			);
+			name = libextobjc;
+			path = External/libextobjc;
+			sourceTree = "<group>";
+		};
 		D01A4A05162C81CC0092D61F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +378,7 @@
 		D0723FDA15C60815004DBDC7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */,
 				306A81EA1601EAE700BF45F3 /* CAAnimation+RBLBlockAdditionsSpec.m */,
 				D03D671A1677E2950041DDF2 /* NSAttributedString+RBLHTMLAdditionsSpec.m */,
 				D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */,
@@ -468,6 +480,7 @@
 		D09AE4E115C5F45200ECAD10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				304692E71607258E00B79746 /* libextobjc */,
 				D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */,
 				D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */,
 				306A81EC1601F44200BF45F3 /* QuartzCore.framework */,
@@ -524,6 +537,7 @@
 		D09AE4FF15C5F45300ECAD10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0723FDD15C60D61004DBDC7 /* testimage.jpg */,
 				D09AE50015C5F45300ECAD10 /* RebelTests-Info.plist */,
 				D09AE50115C5F45300ECAD10 /* InfoPlist.strings */,
 				D04844EC15C5F8DA00834EDE /* RebelTests-Prefix.pch */,
@@ -555,6 +569,7 @@
 				D04CBFC815F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h in Headers */,
 				306A81E81601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.h in Headers */,
 				306A81DB1601C7A300BF45F3 /* RBLPopover.h in Headers */,
+				304692F21607259A00B79746 /* EXTKeyPathCoding.h in Headers */,
 				D0E91C581603CC7600D23E93 /* RBLClipView.h in Headers */,
 				D011FD5E16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h in Headers */,
 				AB61F63616373FE000DD5D2C /* RBLTableCellView.h in Headers */,
@@ -602,6 +617,7 @@
 				D09AE4F215C5F45300ECAD10 /* Sources */,
 				D09AE4F315C5F45300ECAD10 /* Frameworks */,
 				D09AE4F415C5F45300ECAD10 /* Resources */,
+				D09AE4F515C5F45300ECAD10 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -733,6 +749,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D09AE4F515C5F45300ECAD10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D09AE4DA15C5F45200ECAD10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -837,6 +869,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -851,6 +885,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2E815CB307200CC9868 /* Mac-Application.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "RebelTests/RebelTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -892,6 +927,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -906,6 +943,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -920,6 +959,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2E815CB307200CC9868 /* Mac-Application.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "RebelTests/RebelTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -937,6 +977,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2E815CB307200CC9868 /* Mac-Application.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "RebelTests/RebelTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
