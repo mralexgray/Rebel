@@ -166,7 +166,7 @@
 		D08BB2EA15CB307200CC9868 /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
 		D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
 		D08BB2EC15CB307200CC9868 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
-		D08BB2ED15CB307200CC9868 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D08BB2ED15CB307200CC9868 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
 		D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = External/expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
 		D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Specta.xcodeproj; path = External/specta/Specta.xcodeproj; sourceTree = "<group>"; };
 		D09AE4DF15C5F45200ECAD10 /* Rebel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rebel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,8 +297,7 @@
 				D08BB2E715CB307200CC9868 /* Mac OS X */,
 				D08BB2ED15CB307200CC9868 /* README.md */,
 			);
-			name = Configuration;
-			path = External/libextobjc/Configuration;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		D08BB2DA15CB307200CC9868 /* Base */ = {
