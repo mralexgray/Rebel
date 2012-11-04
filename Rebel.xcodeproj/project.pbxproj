@@ -724,7 +724,11 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = "Rebel/Rebel-Prefix.pch";
 				INFOPLIST_FILE = "Rebel/Rebel-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_DYLIB_INSTALL_NAME = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Profile;
@@ -782,7 +786,11 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = "Rebel/Rebel-Prefix.pch";
 				INFOPLIST_FILE = "Rebel/Rebel-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_DYLIB_INSTALL_NAME = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -798,7 +806,11 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PREFIX_HEADER = "Rebel/Rebel-Prefix.pch";
 				INFOPLIST_FILE = "Rebel/Rebel-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_DYLIB_INSTALL_NAME = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
