@@ -13,35 +13,11 @@
 
 //***************************************************************************
 
-// A class which forcably draws `NSClearColor.clearColor` around a given path,
-// effectively clipping any views to the path. You can think of it like a
-// `maskLayer` on a `CALayer`.
-@interface RBLPopoverClippingView : NSView
-
-// The path which the view will clip to. The clippingPath will be retained and
-// released automatically.
-@property (nonatomic) CGPathRef clippingPath;
-
-@end
-
-//***************************************************************************
-
-// We'll use this as RBLPopover's backing window. Since it's borderless, we
-// just override the `isKeyWindow` method to make it behave in the way that
-// `canBecomeKey` demands.
-@interface RBLPopoverWindow : NSWindow
-
-@property (nonatomic) BOOL canBeKey;
-
-@end
-
-//***************************************************************************
-
 @interface RBLPopoverBackgroundView ()
 
-@property (nonatomic, assign, readwrite) CGRectEdge popoverEdge;
+@property (nonatomic) CGRect screenOriginRect;
 
-@property (nonatomic, assign, readwrite) NSRect popoverOrigin;
++ (instancetype)backgroundViewForContentSize:(CGSize)contentSize popoverEdge:(CGRectEdge)popoverEdge originScreenRect:(CGRect)originScreenRect;
 
 - (CGRectEdge)arrowEdgeForPopoverEdge:(CGRectEdge)popoverEdge;
 
@@ -49,38 +25,44 @@
 
 //***************************************************************************
 
+static NSTimeInterval const RBLPopoverDefaultFadeDuration = 0.3;
+
+//***************************************************************************
+
 @interface RBLPopover ()
 
 // The window we are using to display the popover.
-@property (nonatomic, strong) RBLPopoverWindow *popoverWindow;
-
-@property (nonatomic, strong, readonly) RBLPopoverClippingView *clippingView;
+@property (nonatomic, strong) NSWindow *popoverWindow;
 
 // The identifier for the event monitor we are using to watch for mouse clicks
 // outisde of the popover.
-// We are not responsible for its memory management.
-@property (nonatomic, copy) NSSet *transientEventMonitors;
+// We are not responsible for it's memory management.
+@property (nonatomic, weak) id transientEventMonitor;
 
 // The size the content view was before the popover was shown.
 @property (nonatomic) CGSize originalViewSize;
 
-// Used in semi-transient popovers to make sure we allow a click into the parent
-// window to make it key as opposed to closing the popover immediately.
-@property (nonatomic) BOOL parentWindowResignedKey;
+@property (nonatomic, strong, readwrite) RBLPopoverBackgroundView *backgroundView;
 
 // Correctly removes our event monitor watching for mouse clicks external to the
 // popover.
-- (void)removeEventMonitors;
+- (void)removeEventMonitor;
 
 @end
 
 //***************************************************************************
 
-@implementation RBLPopoverClippingView
+// A class which forcably draws `NSClearColor.clearColor` around a given path,
+// effectively clipping any views to the path. You can think of it like a
+// `maskLayer` on a `CALayer`.
+@interface RBLPopoverClippingView : NSView
 
-- (void)dealloc {
-	self.clippingPath = NULL;
-}
+// The path which the view will clip to.
+@property (nonatomic) CGPathRef clippingPath;
+
+@end
+
+@implementation RBLPopoverClippingView
 
 - (void)setClippingPath:(CGPathRef)clippingPath {
 	if (clippingPath == _clippingPath) return;
@@ -88,8 +70,6 @@
 	CGPathRelease(_clippingPath);
 	_clippingPath = clippingPath;
 	CGPathRetain(_clippingPath);
-	
-	self.needsDisplay = YES;
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
@@ -107,52 +87,27 @@
 
 //***************************************************************************
 
-@implementation RBLPopoverWindow
-
-- (BOOL)canBecomeKeyWindow {
-	return self.canBeKey;
-}
-
-@end
-
-//***************************************************************************
-
 @implementation RBLPopover
 
 - (instancetype)initWithContentViewController:(NSViewController *)viewController {
-	RBLPopoverBackgroundView *view = [[RBLPopoverBackgroundView alloc] initWithFrame:NSZeroRect];
-	return [self initWithContentViewController:viewController backgroundView:view];
-}
-
-- (instancetype)initWithContentViewController:(NSViewController *)viewController backgroundView:(RBLPopoverBackgroundView *)backgroundView {
 	self = [super init];
 	if (self == nil)
 		return nil;
 	
 	_contentViewController = viewController;
-	_backgroundView = backgroundView;
-	_clippingView = [[RBLPopoverClippingView alloc] initWithFrame:NSZeroRect];
-	_behavior = RBLPopoverBehaviorApplicationDefined;
+	_backgroundViewClass = RBLPopoverBackgroundView.class;
+	_behavior = RBLPopoverViewControllerBehaviorApplicationDefined;
 	_animates = YES;
-	_fadeDuration = 0.3;
-
-	[self.backgroundView addSubview:self.clippingView];
 	
 	return self;
 }
 
-- (void)dealloc {
-	[self.popoverWindow close];
-}
-
-#pragma mark -
 #pragma mark Derived Properties
 
 - (BOOL)isShown {
 	return self.popoverWindow.isVisible;
 }
 
-#pragma mark -
 #pragma mark Showing
 
 - (void)showRelativeToRect:(CGRect)positioningRect ofView:(NSView *)positioningView preferredEdge:(CGRectEdge)preferredEdge {
@@ -162,13 +117,11 @@
 	
 	NSRect windowRelativeRect = [positioningView convertRect:positioningRect toView:nil];
 	CGRect screenPositioningRect = [positioningView.window convertRectToScreen:windowRelativeRect];
-	
-	[self.contentViewController.view layoutSubtreeIfNeeded];
 	self.originalViewSize = self.contentViewController.view.frame.size;
 	CGSize contentViewSize = (CGSizeEqualToSize(self.contentSize, CGSizeZero) ? self.contentViewController.view.frame.size : self.contentSize);
 	
 	CGRect (^popoverRectForEdge)(CGRectEdge) = ^(CGRectEdge popoverEdge) {
-		CGSize popoverSize = [self.backgroundView sizeForBackgroundViewWithContentSize:contentViewSize popoverEdge:popoverEdge];
+		CGSize popoverSize = [self.backgroundViewClass sizeForBackgroundViewWithContentSize:contentViewSize popoverEdge:popoverEdge];
 		CGRect returnRect = NSMakeRect(0.0, 0.0, popoverSize.width, popoverSize.height);
 		if (popoverEdge == CGRectMinYEdge) {
 			CGFloat xOrigin = NSMidX(screenPositioningRect) - floor(popoverSize.width / 2.0);
@@ -262,88 +215,51 @@
 	}
 	
 	//TODO: Create RBLViewController with viewWillAppear
-	//[self.contentViewController viewWillAppear:YES]; //this will always be animated… in the current implementation
+	//[self.contentViewController viewWillAppear:YES]; //this will always be animated… in the current implementation
 	
 	if (self.willShowBlock != nil) self.willShowBlock(self);
 	
-	if (self.behavior != NSPopoverBehaviorApplicationDefined) {
-		[self removeEventMonitors];
-				
-		__weak RBLPopover *weakSelf = self;
-		void (^monitor)(NSEvent *event) = ^(NSEvent *event) {
-			RBLPopover *strongSelf = weakSelf;
-			if (strongSelf.popoverWindow == nil) return;
+	if (self.behavior != RBLPopoverViewControllerBehaviorApplicationDefined) {
+		[self removeEventMonitor];
+		
+		self.transientEventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:(NSLeftMouseDownMask | NSRightMouseDownMask | NSKeyUpMask) handler: ^(NSEvent *event) {
+			if (self.popoverWindow == nil) return event;
+			
+			static NSUInteger escapeKey = 53;
 			BOOL shouldClose = NO;
-			BOOL mouseInPopoverWindow = NSPointInRect(NSEvent.mouseLocation, strongSelf.popoverWindow.frame);
-			if (strongSelf.behavior == RBLPopoverBehaviorTransient) {
-				shouldClose = !mouseInPopoverWindow;
+			if (event.type == NSLeftMouseDown || event.type == NSRightMouseDown) {
+				shouldClose = (!NSPointInRect(NSEvent.mouseLocation, self.popoverWindow.frame) && self.behavior == RBLPopoverViewControllerBehaviorTransient);
 			} else {
-				shouldClose = strongSelf.popoverWindow.parentWindow.isKeyWindow && NSPointInRect(NSEvent.mouseLocation, strongSelf.popoverWindow.parentWindow.frame) && !mouseInPopoverWindow && !strongSelf.parentWindowResignedKey;
-				
-				if (strongSelf.popoverWindow.parentWindow.isKeyWindow) self.parentWindowResignedKey = NO;
+				shouldClose = (event.keyCode == escapeKey);
 			}
 			
-			if (shouldClose) [strongSelf close];
-		};
-		
-		NSInteger mask = 0;
-		if (self.behavior == RBLPopoverBehaviorTransient) {
-			mask = NSLeftMouseDownMask | NSRightMouseDownMask;
-		} else {
-			mask = NSLeftMouseUpMask | NSRightMouseUpMask;
-		}
-		
-		NSMutableSet *newMonitors = [[NSMutableSet alloc] init];
-		if (self.behavior == RBLPopoverBehaviorTransient) {
-			[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(appResignedActive:) name:NSApplicationDidResignActiveNotification object:NSApp];
-			id globalMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:mask handler:monitor];
-			[newMonitors addObject:globalMonitor];
-		}
-		
-		if (self.behavior == RBLPopoverBehaviorSemiTransient) {
-			[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(parentWindowResignedKey:) name:NSWindowDidResignKeyNotification object:self.popoverWindow.parentWindow];
-		}
-		
-		id localMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:mask handler:^(NSEvent *event) {
-			monitor(event);
+			if (shouldClose) [self close];
+			
 			return event;
 		}];
-		[newMonitors addObject:localMonitor];
-		self.transientEventMonitors = newMonitors;
 	}
 	
-	CGSize size = [self.backgroundView sizeForBackgroundViewWithContentSize:contentViewSize popoverEdge:popoverEdge];
-	self.backgroundView.frame = (NSRect){ .size = size };
-	self.backgroundView.popoverEdge = popoverEdge;
-	self.backgroundView.popoverOrigin = screenPositioningRect;
+	self.backgroundView = [self.backgroundViewClass backgroundViewForContentSize:contentViewSize popoverEdge:popoverEdge originScreenRect:screenPositioningRect];
 	
-	CGRect contentViewFrame = [self.backgroundView contentViewFrameForBackgroundFrame:self.backgroundView.bounds popoverEdge:popoverEdge];
+	CGRect contentViewFrame = [self.backgroundViewClass contentViewFrameForBackgroundFrame:self.backgroundView.bounds popoverEdge:popoverEdge];
 	self.contentViewController.view.autoresizingMask = (NSViewWidthSizable | NSViewHeightSizable);
 	self.contentViewController.view.frame = contentViewFrame;
-	[self.backgroundView addSubview:self.contentViewController.view positioned:NSWindowBelow relativeTo:self.clippingView];
-	self.popoverWindow = [[RBLPopoverWindow alloc] initWithContentRect:popoverScreenRect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];
+	[self.backgroundView addSubview:self.contentViewController.view];
+	self.popoverWindow = [[NSWindow alloc] initWithContentRect:popoverScreenRect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];
 	self.popoverWindow.hasShadow = YES;
 	self.popoverWindow.releasedWhenClosed = NO;
 	self.popoverWindow.opaque = NO;
 	self.popoverWindow.backgroundColor = NSColor.clearColor;
 	self.popoverWindow.contentView = self.backgroundView;
-	self.popoverWindow.canBeKey = self.canBecomeKey;
 	if (self.animates) {
 		self.popoverWindow.alphaValue = 0.0;
 	}
-
-	// We're using a dummy button to capture the escape key equivalent when it
-	// isn't handled by the first responder. This is bad and I feel bad.
-	NSButton *closeButton = [[NSButton alloc] initWithFrame:CGRectMake(-1, -1, 0, 0)];
-	closeButton.keyEquivalent = @"\E";
-	closeButton.target = self;
-	closeButton.action = @selector(performClose:);
-	[self.popoverWindow.contentView addSubview:closeButton];
 	
-	self.clippingView.frame = self.backgroundView.bounds;
-	CGPathRef clippingPath = [self.backgroundView newPopoverPathForEdge:popoverEdge inFrame:self.clippingView.bounds];
-	self.clippingView.clippingPath = clippingPath;
+	RBLPopoverClippingView *clippingView = [[RBLPopoverClippingView alloc] initWithFrame:self.backgroundView.bounds];
+	CGPathRef clippingPath = [self.backgroundView newPopoverPathForEdge:popoverEdge inFrame:clippingView.bounds];
+	clippingView.clippingPath = clippingPath;
 	CGPathRelease(clippingPath);
+	[self.backgroundView addSubview:clippingView];
 	
 	[positioningView.window addChildWindow:self.popoverWindow ordered:NSWindowAbove];
 	[self.popoverWindow makeKeyAndOrderFront:self];
@@ -353,7 +269,7 @@
 	};
 	
 	if (self.animates) {
-		[NSView rbl_animateWithDuration:self.fadeDuration animations:^{
+		[NSView rbl_animateWithDuration:RBLPopoverDefaultFadeDuration animations:^{
 			[self.popoverWindow.animator setAlphaValue:1.0];
 		} completion:postDisplayBlock];
 	} else {
@@ -361,13 +277,16 @@
 	}
 }
 
-#pragma mark -
 #pragma mark Closing
 
 - (void)close {
+	[self closeWithFadeoutDuration:RBLPopoverDefaultFadeDuration];
+}
+
+- (void)closeWithFadeoutDuration:(NSTimeInterval)duration {
 	if (!self.shown) return;
 	
-	[self removeEventMonitors];
+	[self removeEventMonitor];
 	
 	if (self.willCloseBlock != nil) self.willCloseBlock(self);
 	
@@ -381,7 +300,7 @@
 	};
 	
 	if (self.animates) {
-		[NSView rbl_animateWithDuration:self.fadeDuration animations:^{
+		[NSView rbl_animateWithDuration:duration animations:^{
 			[self.popoverWindow.animator setAlphaValue:0.0];
 		} completion:windowTeardown];
 	} else {
@@ -393,26 +312,12 @@
 	[self close];
 }
 
-#pragma mark -
 #pragma mark Event Monitor
 
-- (void)removeEventMonitors {
-	for (id eventMonitor in self.transientEventMonitors) {
-		[NSEvent removeMonitor:eventMonitor];
-	}
-	self.transientEventMonitors = nil;
-	[NSNotificationCenter.defaultCenter removeObserver:self name:NSApplicationDidResignActiveNotification object:NSApp];
-	[NSNotificationCenter.defaultCenter removeObserver:self name:NSWindowDidResignKeyNotification object:nil];
-}
-
-- (void)appResignedActive:(NSNotification *)notification {
-	if (self.behavior == RBLPopoverBehaviorTransient) [self close];
-}
-
-- (void)parentWindowResignedKey:(NSNotification *)notification {
-	if (self.behavior != RBLPopoverBehaviorSemiTransient) return;
-	
-	self.parentWindowResignedKey = YES;
+- (void)removeEventMonitor {
+	if (self.transientEventMonitor == nil) return;
+	[NSEvent removeMonitor:self.transientEventMonitor];
+	self.transientEventMonitor = nil;
 }
 
 @end
@@ -427,12 +332,12 @@ static CGFloat const RBLPopoverBackgroundViewArrowWidth = 35.0;
 
 @implementation RBLPopoverBackgroundView
 
-- (CGSize)sizeForBackgroundViewWithContentSize:(CGSize)contentSize popoverEdge:(CGRectEdge)popoverEdge {
++ (CGSize)sizeForBackgroundViewWithContentSize:(CGSize)contentSize popoverEdge:(CGRectEdge)popoverEdge {
 	CGSize returnSize = contentSize;
 	if (popoverEdge == CGRectMaxXEdge || popoverEdge == CGRectMinXEdge) {
-		returnSize.width += self.arrowSize.height;
+		returnSize.width += RBLPopoverBackgroundViewArrowHeight;
 	} else {
-		returnSize.height += self.arrowSize.height;
+		returnSize.height += RBLPopoverBackgroundViewArrowHeight;
 	}
 	
 	returnSize.width += 2.0;
@@ -441,22 +346,22 @@ static CGFloat const RBLPopoverBackgroundViewArrowWidth = 35.0;
 	return returnSize;
 }
 
-- (CGRect)contentViewFrameForBackgroundFrame:(CGRect)backgroundFrame popoverEdge:(CGRectEdge)popoverEdge {
++ (CGRect)contentViewFrameForBackgroundFrame:(CGRect)backgroundFrame popoverEdge:(CGRectEdge)popoverEdge {
 	CGRect returnFrame = NSInsetRect(backgroundFrame, 1.0, 1.0);
 	switch (popoverEdge) {
 		case CGRectMinXEdge:
-			returnFrame.size.width -= self.arrowSize.height;
+			returnFrame.size.width -= RBLPopoverBackgroundViewArrowHeight;
 			break;
 		case CGRectMinYEdge:
-			returnFrame.size.height -= self.arrowSize.height;
+			returnFrame.size.height -= RBLPopoverBackgroundViewArrowHeight;
 			break;
 		case CGRectMaxXEdge:
-			returnFrame.size.width -= self.arrowSize.height;
-			returnFrame.origin.x += self.arrowSize.height;
+			returnFrame.size.width -= RBLPopoverBackgroundViewArrowHeight;
+			returnFrame.origin.x += RBLPopoverBackgroundViewArrowHeight;
 			break;
 		case CGRectMaxYEdge:
-			returnFrame.size.height -= self.arrowSize.height;
-			returnFrame.origin.y += self.arrowSize.height;
+			returnFrame.size.height -= RBLPopoverBackgroundViewArrowHeight;
+			returnFrame.origin.y += RBLPopoverBackgroundViewArrowHeight;
 			break;
 		default:
 			NSAssert(NO, @"Failed to pass in a valid CGRectEdge");
@@ -466,16 +371,22 @@ static CGFloat const RBLPopoverBackgroundViewArrowWidth = 35.0;
 	return returnFrame;
 }
 
++ (instancetype)backgroundViewForContentSize:(CGSize)contentSize popoverEdge:(CGRectEdge)popoverEdge originScreenRect:(CGRect)originScreenRect {
+	CGSize size = [self sizeForBackgroundViewWithContentSize:contentSize popoverEdge:popoverEdge];
+	RBLPopoverBackgroundView *returnView = [[self.class alloc] initWithFrame:NSMakeRect(0.0, 0.0, size.width, size.height) popoverEdge:popoverEdge originScreenRect:originScreenRect];
+	return returnView;
+}
+
 - (CGPathRef)newPopoverPathForEdge:(CGRectEdge)popoverEdge inFrame:(CGRect)frame {
 	CGRectEdge arrowEdge = [self arrowEdgeForPopoverEdge:popoverEdge];
 	
-	CGRect contentRect = CGRectIntegral([self contentViewFrameForBackgroundFrame:frame popoverEdge:self.popoverEdge]);
+	CGRect contentRect = CGRectIntegral([self.class contentViewFrameForBackgroundFrame:frame popoverEdge:self.popoverEdge]);
 	CGFloat minX = NSMinX(contentRect);
 	CGFloat maxX = NSMaxX(contentRect);
 	CGFloat minY = NSMinY(contentRect);
 	CGFloat maxY = NSMaxY(contentRect);
 
-	CGRect windowRect = [self.window convertRectFromScreen:self.popoverOrigin];
+	CGRect windowRect = [self.window convertRectFromScreen:self.screenOriginRect];
 	CGRect originRect = [self convertRect:windowRect fromView:nil];
 	CGFloat midOriginY = floor(NSMidY(originRect));
 	CGFloat midOriginX = floor(NSMidX(originRect));
@@ -491,33 +402,33 @@ static CGFloat const RBLPopoverBackgroundViewArrowWidth = 35.0;
 	// That is what this complete mess below does.
 	
 	if (arrowEdge == CGRectMinYEdge || arrowEdge == CGRectMaxYEdge) {
-		maxArrowX = floor(midOriginX + (self.arrowSize.width / 2.0));
+		maxArrowX = floor(midOriginX + (RBLPopoverBackgroundViewArrowWidth / 2.0));
 		CGFloat maxPossible = (NSMaxX(contentRect) - RBLPopoverBackgroundViewBorderRadius);
 		if (maxArrowX > maxPossible) {
 			CGFloat delta = maxArrowX - maxPossible;
 			maxArrowX = maxPossible;
-			minArrowX = maxArrowX - (self.arrowSize.width - delta);
+			minArrowX = maxArrowX - (RBLPopoverBackgroundViewArrowWidth - delta);
 		} else {
-			minArrowX = floor(midOriginX - (self.arrowSize.width / 2.0));
+			minArrowX = floor(midOriginX - (RBLPopoverBackgroundViewArrowWidth / 2.0));
 			if (minArrowX < RBLPopoverBackgroundViewBorderRadius) {
 				CGFloat delta = RBLPopoverBackgroundViewBorderRadius - minArrowX;
 				minArrowX = RBLPopoverBackgroundViewBorderRadius;
-				maxArrowX = minArrowX + (self.arrowSize.width - (delta * 2));
+				maxArrowX = minArrowX + (RBLPopoverBackgroundViewArrowWidth - (delta * 2));
 			}
 		}
 	} else {
-		minArrowY = floor(midOriginY - (self.arrowSize.width / 2.0));
+		minArrowY = floor(midOriginY - (RBLPopoverBackgroundViewArrowWidth / 2.0));
 		if (minArrowY < RBLPopoverBackgroundViewBorderRadius) {
 			CGFloat delta = RBLPopoverBackgroundViewBorderRadius - minArrowY;
 			minArrowY = RBLPopoverBackgroundViewBorderRadius;
-			maxArrowY = minArrowY + (self.arrowSize.width - (delta * 2));
+			maxArrowY = minArrowY + (RBLPopoverBackgroundViewArrowWidth - (delta * 2));
 		} else {
-			maxArrowY = floor(midOriginY + (self.arrowSize.width / 2.0));
+			maxArrowY = floor(midOriginY + (RBLPopoverBackgroundViewArrowWidth / 2.0));
 			CGFloat maxPossible = (NSMaxY(contentRect) - RBLPopoverBackgroundViewBorderRadius);
 			if (maxArrowY > maxPossible) {
 				CGFloat delta = maxArrowY - maxPossible;
 				maxArrowY = maxPossible;
-				minArrowY = maxArrowY - (self.arrowSize.width - delta);
+				minArrowY = maxArrowY - (RBLPopoverBackgroundViewArrowWidth - delta);
 			}
 		}
 	}
@@ -526,28 +437,28 @@ static CGFloat const RBLPopoverBackgroundViewArrowWidth = 35.0;
 	CGPathMoveToPoint(path, NULL, minX, floor(minY + RBLPopoverBackgroundViewBorderRadius));
 	if (arrowEdge == CGRectMinXEdge) {
 		CGPathAddLineToPoint(path, NULL, minX, minArrowY);
-		CGPathAddLineToPoint(path, NULL, floor(minX - self.arrowSize.height), midOriginY);
+		CGPathAddLineToPoint(path, NULL, floor(minX - RBLPopoverBackgroundViewArrowHeight), midOriginY);
 		CGPathAddLineToPoint(path, NULL, minX, maxArrowY);
 	}
 	
 	CGPathAddArc(path, NULL, floor(minX + RBLPopoverBackgroundViewBorderRadius), floor(minY + contentRect.size.height - RBLPopoverBackgroundViewBorderRadius), RBLPopoverBackgroundViewBorderRadius, M_PI, M_PI / 2, 1);
 	if (arrowEdge == CGRectMaxYEdge) {
 		CGPathAddLineToPoint(path, NULL, minArrowX, maxY);
-		CGPathAddLineToPoint(path, NULL, midOriginX, floor(maxY + self.arrowSize.height));
+		CGPathAddLineToPoint(path, NULL, midOriginX, floor(maxY + RBLPopoverBackgroundViewArrowHeight));
 		CGPathAddLineToPoint(path, NULL, maxArrowX, maxY);
 	}
 	
 	CGPathAddArc(path, NULL, floor(minX + contentRect.size.width - RBLPopoverBackgroundViewBorderRadius), floor(minY + contentRect.size.height - RBLPopoverBackgroundViewBorderRadius), RBLPopoverBackgroundViewBorderRadius, M_PI / 2, 0.0, 1);
 	if (arrowEdge == CGRectMaxXEdge) {
 		CGPathAddLineToPoint(path, NULL, maxX, maxArrowY);
-		CGPathAddLineToPoint(path, NULL, floor(maxX + self.arrowSize.height), midOriginY);
+		CGPathAddLineToPoint(path, NULL, floor(maxX + RBLPopoverBackgroundViewArrowHeight), midOriginY);
 		CGPathAddLineToPoint(path, NULL, maxX, minArrowY);
 	}
 	
 	CGPathAddArc(path, NULL, floor(contentRect.origin.x + contentRect.size.width - RBLPopoverBackgroundViewBorderRadius), floor(minY + RBLPopoverBackgroundViewBorderRadius), RBLPopoverBackgroundViewBorderRadius, 0.0, -M_PI / 2, 1);
 	if (arrowEdge == CGRectMinYEdge) {
 		CGPathAddLineToPoint(path, NULL, maxArrowX, minY);
-		CGPathAddLineToPoint(path, NULL, midOriginX, floor(minY - self.arrowSize.height));
+		CGPathAddLineToPoint(path, NULL, midOriginX, floor(minY - RBLPopoverBackgroundViewArrowHeight));
 		CGPathAddLineToPoint(path, NULL, minArrowX, minY);
 	}
 	
@@ -556,11 +467,12 @@ static CGFloat const RBLPopoverBackgroundViewArrowWidth = 35.0;
 	return path;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame popoverEdge:(CGRectEdge)popoverEdge originScreenRect:(CGRect)originScreenRect {
 	self = [super initWithFrame:frame];
 	if (self == nil) return nil;
 	
-	_arrowSize = CGSizeMake(RBLPopoverBackgroundViewArrowWidth, RBLPopoverBackgroundViewArrowHeight);
+	_popoverEdge = popoverEdge;
+	_screenOriginRect = originScreenRect;
 	_fillColor = NSColor.whiteColor;
 	
 	return self;
