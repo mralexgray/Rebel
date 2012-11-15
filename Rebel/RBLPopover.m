@@ -102,14 +102,12 @@ static NSTimeInterval const RBLPopoverDefaultFadeDuration = 0.3;
 	return self;
 }
 
-#pragma mark -
 #pragma mark Derived Properties
 
 - (BOOL)isShown {
 	return self.popoverWindow.isVisible;
 }
 
-#pragma mark -
 #pragma mark Showing
 
 - (void)showRelativeToRect:(CGRect)positioningRect ofView:(NSView *)positioningView preferredEdge:(CGRectEdge)preferredEdge {
@@ -279,7 +277,6 @@ static NSTimeInterval const RBLPopoverDefaultFadeDuration = 0.3;
 	}
 }
 
-#pragma mark -
 #pragma mark Closing
 
 - (void)close {
@@ -315,7 +312,6 @@ static NSTimeInterval const RBLPopoverDefaultFadeDuration = 0.3;
 	[self close];
 }
 
-#pragma mark -
 #pragma mark Event Monitor
 
 - (void)removeEventMonitor {
