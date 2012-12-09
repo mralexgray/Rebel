@@ -858,8 +858,8 @@
 			baseConfigurationReference = D08BB2DE15CB307200CC9868 /* Profile.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -869,17 +869,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREFIX_HEADER = "Rebel/Rebel-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Rebel/Rebel-Info.plist";
-				INSTALL_PATH = "@rpath";
+				INSTALL_PATH = "@loader_path/Frameworks";
 				LD_DYLIB_INSTALL_NAME = "";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -908,8 +912,8 @@
 			baseConfigurationReference = D08BB2DD15CB307200CC9868 /* Debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -920,8 +924,8 @@
 			baseConfigurationReference = D08BB2DF15CB307200CC9868 /* Release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -931,17 +935,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREFIX_HEADER = "Rebel/Rebel-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Rebel/Rebel-Info.plist";
-				INSTALL_PATH = "@rpath";
+				INSTALL_PATH = "@loader_path/Frameworks";
 				LD_DYLIB_INSTALL_NAME = "";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -951,17 +959,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREFIX_HEADER = "Rebel/Rebel-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Rebel/Rebel-Info.plist";
-				INSTALL_PATH = "@rpath";
+				INSTALL_PATH = "@loader_path/Frameworks";
 				LD_DYLIB_INSTALL_NAME = "";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
