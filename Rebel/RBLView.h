@@ -12,19 +12,35 @@
 // for MVVM.
 @interface RBLView : NSView
 
-// The backing layer's background color, or nil if none has been set.
+// A background color for the view, or nil if none has been set. This property
+// is not the same as CALayer.backgroundColor, but does manipulate it.
 @property (nonatomic, strong) NSColor *backgroundColor;
+
+// Whether the view's content and subviews clip to its bounds. This property
+// is not the same as CALayer.masksToBounds, but does manipulate it.
+//
+// Defaults to NO.
+@property (nonatomic, assign) BOOL clipsToBounds;
+
+// A radius used to draw rounded corners for the view's background. This property
+// is not the same as CALayer.cornerRadius, but does manipulate it.
+//
+// Typically, you will want to enable clipsToBounds when setting this property
+// to a non-zero value.
+//
+// Defaults to 0.
+@property (nonatomic, assign) CGFloat cornerRadius;
 
 // Whether the view's drawing completely fills its bounds with opaque content.
 //
 // Defaults to NO.
-@property (nonatomic, getter = isOpaque) BOOL opaque;
+@property (nonatomic, assign, getter = isOpaque) BOOL opaque;
 
 // Whether the view's drawing and layout uses a flipped (top-left origin)
 // coordinate system.
 //
 // Defaults to NO.
-@property (nonatomic, getter = isFlipped) BOOL flipped;
+@property (nonatomic, assign, getter = isFlipped) BOOL flipped;
 
 // Whether the graphics context for the view's drawing should be cleared to
 // transparent black in RBLView's implementation of -drawRect:.
@@ -53,9 +69,5 @@
 // Subclasses may override this method to redraw the given rectangle. Any
 // override of this method should invoke super.
 - (void)drawRect:(NSRect)rect;
-
-// Subclasses may override this method to manually lay out subviews. Any
-// override of this method should invoke super.
-- (void)layout;
 
 @end

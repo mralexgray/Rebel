@@ -20,6 +20,10 @@
 }
 
 - (void)drawInRect:(NSRect)dstRect fromRect:(NSRect)srcRect operation:(NSCompositingOperation)op fraction:(CGFloat)alpha respectFlipped:(BOOL)respectFlipped hints:(NSDictionary *)hints {
+	if (NSIsEmptyRect(dstRect)) {
+		CGContextRef context = NSGraphicsContext.currentContext.graphicsPort;
+		dstRect = CGContextGetClipBoundingBox(context);
+	}
 	CGImageRef image = [self CGImageForProposedRect:&dstRect context:NSGraphicsContext.currentContext hints:hints];
 	NSAssert(image != NULL, @"Could not get CGImage of %@ for resizing", self);
 
@@ -135,7 +139,7 @@
 		NSDrawThreePartImage(dstRect, leftEdge, center, rightEdge, NO, op, alpha, flipped);
 	} else {
 		// Vertical three-part image.
-		NSDrawThreePartImage(dstRect, topEdge, center, bottomEdge, YES, op, alpha, flipped);
+		NSDrawThreePartImage(dstRect, (flipped ? bottomEdge : topEdge), center, (flipped ? topEdge : bottomEdge), YES, op, alpha, flipped);
 	}
 }
 
