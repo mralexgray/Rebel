@@ -16,8 +16,11 @@
 // hasVerticalScroller are set _after_ the contentView.
 @interface RBLClipView : NSClipView
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wsuper-class-method-mismatch"
 // The backing layer for this view.
 @property (nonatomic, strong) CAScrollLayer *layer;
+#pragma clang diagnostic pop
 
 // Whether the content in this view is opaque.
 //
