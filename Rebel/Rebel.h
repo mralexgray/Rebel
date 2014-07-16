@@ -25,3 +25,4 @@
 #import <Rebel/RBLSlidingContainerView.h>
 #import <Rebel/RBLTableCellView.h>
 #import <Rebel/RBLTableView.h>
+#import <Rebel/RBLView.h>
