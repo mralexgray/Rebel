@@ -398,9 +398,9 @@ static CGFloat RBLRectsGetMedianY(CGRect r1, CGRect r2) {
 	}
 
 	if (self.behavior != RBLPopoverBehaviorApplicationDefined) {
-		__weak typeof(self) weakSelf = self;
+		__weak __typeof(self) weakSelf = self;
 		void(^closePopoverBlock)(NSNotification *) = ^(NSNotification *note) {
-			__strong typeof(weakSelf) popover = weakSelf;
+			__strong __typeof(weakSelf) popover = weakSelf;
 			// Turn off animations. We want the close to be instantaneous since the
 			// parent window's going to be animating too.
 			BOOL shouldAnimate = popover.animates;
