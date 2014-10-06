@@ -17,11 +17,16 @@ static IMP RBLViewDrawRectIMP;
 	struct {
 		unsigned clearsContextBeforeDrawing:1;
 		unsigned flipped:1;
+		unsigned clipsToBounds:1;
+		unsigned opaque:1;
 	} _flags;
 }
 
 // Whether this subclass of RBLView overrides -drawRect:.
 + (BOOL)doesCustomDrawing;
+
+// Applies all layer properties that the receiver knows about.
+- (void)applyLayerProperties;
 
 @end
 
@@ -32,20 +37,32 @@ static IMP RBLViewDrawRectIMP;
 // Implemented by NSView.
 @dynamic layerContentsRedrawPolicy;
 
-- (NSColor *)backgroundColor {
-	return [NSColor rbl_colorWithCGColor:self.layer.backgroundColor];
+- (void)setBackgroundColor:(NSColor *)color {
+	_backgroundColor = color;
+	[self applyLayerProperties];
 }
 
-- (void)setBackgroundColor:(NSColor *)color {
-	self.layer.backgroundColor = color.rbl_CGColor;
+- (void)setCornerRadius:(CGFloat)radius {
+	_cornerRadius = radius;
+	[self applyLayerProperties];
+}
+
+- (BOOL)clipsToBounds {
+	return _flags.clipsToBounds;
+}
+
+- (void)setClipsToBounds:(BOOL)value {
+	_flags.clipsToBounds = (value ? 1 : 0);
+	[self applyLayerProperties];
 }
 
 - (BOOL)isOpaque {
-	return self.layer.opaque;
+	return _flags.opaque;
 }
 
 - (void)setOpaque:(BOOL)value {
-	self.layer.opaque = value;
+	_flags.opaque = (value ? 1 : 0);
+	[self applyLayerProperties];
 }
 
 - (BOOL)isFlipped {
@@ -131,6 +148,32 @@ static IMP RBLViewDrawRectIMP;
 	}
 }
 
+#pragma mark View Hierarchy
+
+// Before 10.8, AppKit may destroy the view's layer when changing superviews
+// or windows, so reapply our properties when either of those events occur.
+- (void)viewDidMoveToSuperview {
+	[self applyLayerProperties];
+}
+
+- (void)viewDidMoveToWindow {
+	[self applyLayerProperties];
+}
+
+#pragma mark Layer Management
+
+- (void)applyLayerProperties {
+	self.layer.backgroundColor = self.backgroundColor.rbl_CGColor;
+	self.layer.cornerRadius = self.cornerRadius;
+	self.layer.masksToBounds = self.clipsToBounds;
+	self.layer.opaque = self.opaque;
+}
+
+- (void)setLayer:(CALayer *)layer {
+	[super setLayer:layer];
+	[self applyLayerProperties];
+}
+
 // 10.8+ only.
 - (void)updateLayer {
 	NSAssert(self.contents != nil, @"%@ does not have contents, %s should not be invoked", self, __func__);
@@ -140,17 +183,6 @@ static IMP RBLViewDrawRectIMP;
 // 10.8+ only.
 - (BOOL)wantsUpdateLayer {
 	return self.contents != nil;
-}
-
-#pragma mark Layout
-
-+ (BOOL)requiresConstraintBasedLayout {
-	// Necessary for -layout to be consistently invoked.
-	return YES;
-}
-
-- (void)layout {
-	[super layout];
 }
 
 #pragma mark NSObject

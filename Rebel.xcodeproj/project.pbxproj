@@ -7,19 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		301569981602161400E3BE46 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306A81EC1601F44200BF45F3 /* QuartzCore.framework */; };
-		304692F21607259A00B79746 /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 304692F11607259A00B79746 /* EXTKeyPathCoding.h */; };
+		0396050A16E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0396050816E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0396050B16E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0396050916E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.m */; };
+		03ECBD9816FD2E6800DA27D0 /* NSView+RBLAlignmentAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ECBD9716FD2E6800DA27D0 /* NSView+RBLAlignmentAdditionsSpec.m */; };
+		30309E8D17228C1700BC2923 /* RBLTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 30309E8B17228C1700BC2923 /* RBLTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30309E8E17228C1700BC2923 /* RBLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30309E8C17228C1700BC2923 /* RBLTableView.m */; };
+		303DEF4416D2B88700BD65C4 /* RBLShadowedTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 303DEF4216D2B88700BD65C4 /* RBLShadowedTextFieldCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		303DEF4516D2B88700BD65C4 /* RBLShadowedTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 303DEF4316D2B88700BD65C4 /* RBLShadowedTextFieldCell.m */; };
 		306A81DB1601C7A300BF45F3 /* RBLPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = 306A81D91601C7A300BF45F3 /* RBLPopover.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		306A81DC1601C7A300BF45F3 /* RBLPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 306A81DA1601C7A300BF45F3 /* RBLPopover.m */; };
 		306A81E81601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 306A81E61601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		306A81E91601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 306A81E71601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.m */; };
 		306A81EB1601EAE700BF45F3 /* CAAnimation+RBLBlockAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 306A81EA1601EAE700BF45F3 /* CAAnimation+RBLBlockAdditionsSpec.m */; };
+		88347E6A16F213C500872A0A /* RBLHTMLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 88347E6816F213C500872A0A /* RBLHTMLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88347E6B16F213C500872A0A /* RBLHTMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88347E6916F213C500872A0A /* RBLHTMLView.m */; };
+		884675FF16F2574200016B56 /* RBLHTMLViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 884675FE16F2574200016B56 /* RBLHTMLViewSpec.m */; };
+		AB10DB4D166EA9CA00AB7AB1 /* RBLScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB10DB4B166EA9CA00AB7AB1 /* RBLScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB10DB4E166EA9CA00AB7AB1 /* RBLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB10DB4C166EA9CA00AB7AB1 /* RBLScrollView.m */; };
+		AB10DB53166EADD000AB7AB1 /* RBLScrollViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AB10DB52166EADD000AB7AB1 /* RBLScrollViewSpec.m */; };
 		AB61F63616373FE000DD5D2C /* RBLTableCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB61F63416373FE000DD5D2C /* RBLTableCellView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB61F63716373FE000DD5D2C /* RBLTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61F63516373FE000DD5D2C /* RBLTableCellView.m */; };
+		AB61F6D41638370900DD5D2C /* NSApplication+RBLBlockAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AB61F6D21638370900DD5D2C /* NSApplication+RBLBlockAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB61F6D51638370900DD5D2C /* NSApplication+RBLBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61F6D31638370900DD5D2C /* NSApplication+RBLBlockAdditions.m */; };
+		B85EE8ED163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B85EE8EB163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h */; };
+		B85EE8EE163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE8EC163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m */; };
 		D011FD5E16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D011FD5C16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D011FD5F16239A8600A27946 /* NSImage+RBLResizableImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D011FD5D16239A8600A27946 /* NSImage+RBLResizableImageAdditions.m */; };
-		D01A4A28162C81EE0092D61F /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D01A4A0C162C81CC0092D61F /* libExpecta.a */; };
-		D01A4A29162C81EE0092D61F /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D01A4A1D162C81D60092D61F /* libSpecta.a */; };
+		D03D67181677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D03D67161677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D03D67191677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D67171677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.m */; };
+		D03D671B1677E2950041DDF2 /* NSAttributedString+RBLHTMLAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D671A1677E2950041DDF2 /* NSAttributedString+RBLHTMLAdditionsSpec.m */; };
 		D0410EAC15C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0410EAA15C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.m */; };
 		D04CBFC815F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D04CBFC615F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D04CBFC915F6D87B004A5BCC /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D04CBFC715F6D87B004A5BCC /* NSView+RBLAnimationAdditions.m */; };
@@ -29,93 +45,33 @@
 		D0723FC615C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D0723FC415C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0723FC715C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FC515C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D0723FDC15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */; };
-		D0723FDE15C60D61004DBDC7 /* testimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0723FDD15C60D61004DBDC7 /* testimage.jpg */; };
 		D0723FE015C60E94004DBDC7 /* RBLViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FDF15C60E94004DBDC7 /* RBLViewSpec.m */; };
 		D0723FE315C616AF004DBDC7 /* RBLResizableImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D0723FE115C616AF004DBDC7 /* RBLResizableImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0723FE415C616AF004DBDC7 /* RBLResizableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FE215C616AF004DBDC7 /* RBLResizableImage.m */; };
 		D078B7DE15F6DB420063DDD5 /* NSView+RBLAnimationAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D078B7DD15F6DB420063DDD5 /* NSView+RBLAnimationAdditionsSpec.m */; };
-		D09AE4E315C5F45200ECAD10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AE4E215C5F45200ECAD10 /* Cocoa.framework */; };
+		D088BEF916747D8F004B2665 /* NSFont+RBLFallbackAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D088BEF716747D8F004B2665 /* NSFont+RBLFallbackAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D088BEFA16747D8F004B2665 /* NSFont+RBLFallbackAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D088BEF816747D8F004B2665 /* NSFont+RBLFallbackAdditions.m */; };
+		D088BEFC16747EE1004B2665 /* NSFont+RBLFallbackAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D088BEFB16747EE1004B2665 /* NSFont+RBLFallbackAdditionsSpec.m */; };
 		D09AE4ED15C5F45200ECAD10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D09AE4EB15C5F45200ECAD10 /* InfoPlist.strings */; };
-		D09AE4F915C5F45300ECAD10 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AE4F815C5F45300ECAD10 /* SenTestingKit.framework */; };
-		D09AE4FA15C5F45300ECAD10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AE4E215C5F45200ECAD10 /* Cocoa.framework */; };
 		D09AE4FD15C5F45300ECAD10 /* Rebel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AE4DF15C5F45200ECAD10 /* Rebel.framework */; };
 		D09AE50315C5F45300ECAD10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D09AE50115C5F45300ECAD10 /* InfoPlist.strings */; };
 		D0E91C581603CC7600D23E93 /* RBLClipView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E91C561603CC7600D23E93 /* RBLClipView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0E91C591603CC7600D23E93 /* RBLClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E91C571603CC7600D23E93 /* RBLClipView.m */; };
-		D0E91C5B1603CDC300D23E93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E91C5A1603CDC300D23E93 /* QuartzCore.framework */; };
+		D419E3B7193392AD00F77217 /* RBLOutlineView.h in Headers */ = {isa = PBXBuildFile; fileRef = D419E3B5193392AD00F77217 /* RBLOutlineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D419E3B8193392AD00F77217 /* RBLOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D419E3B6193392AD00F77217 /* RBLOutlineView.m */; };
+		D4559AE81934C2910051A6BE /* RBLScrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = D4559AE61934C2910051A6BE /* RBLScrolling.h */; };
+		D4559AE91934C2910051A6BE /* RBLScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = D4559AE71934C2910051A6BE /* RBLScrolling.m */; };
+		F63D7C78171D31010006515F /* RBLResizableImageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F63D7C77171D31010006515F /* RBLResizableImageSpec.m */; };
+		F63D7C7C171D3CCB0006515F /* <RBLResizableImageSpec>_testimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F63D7C79171D3CCB0006515F /* <RBLResizableImageSpec>_testimage@2x.png */; };
+		F63D7C7D171D3CCB0006515F /* <RBLResizableImageSpec>_testimage.png in Resources */ = {isa = PBXBuildFile; fileRef = F63D7C7A171D3CCB0006515F /* <RBLResizableImageSpec>_testimage.png */; };
+		F63D7C7E171D3CCB0006515F /* <RBLCGColorAdditionsSpec>_testimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F63D7C7B171D3CCB0006515F /* <RBLCGColorAdditionsSpec>_testimage.jpg */; };
+		F64F8DEA1797E1F400082A3F /* RBLSlidingContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = F64F8DE81797E1F400082A3F /* RBLSlidingContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F64F8DEB1797E1F400082A3F /* RBLSlidingContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F64F8DE91797E1F400082A3F /* RBLSlidingContainerView.m */; };
+		F6A562C01797DC5A00B651C0 /* RBLExpandingContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = F6A562BE1797DC5A00B651C0 /* RBLExpandingContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6A562C11797DC5A00B651C0 /* RBLExpandingContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A562BF1797DC5A00B651C0 /* RBLExpandingContainerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D01A4A0B162C81CC0092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9ACDF0C13B2DD520010F4D7;
-			remoteInfo = Expecta;
-		};
-		D01A4A0D162C81CC0092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E93067CE13B2E6D100EA26FF;
-			remoteInfo = "Expecta-iOS";
-		};
-		D01A4A0F162C81CC0092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9ACDF1D13B2DD520010F4D7;
-			remoteInfo = ExpectaTests;
-		};
-		D01A4A11162C81CC0092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E93067DA13B2E6D100EA26FF;
-			remoteInfo = "Expecta-iOSTests";
-		};
-		D01A4A1C162C81D60092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9D96A2614B6B8AB007D9521;
-			remoteInfo = Specta;
-		};
-		D01A4A1E162C81D60092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9B777A414BA294B00D8DC76;
-			remoteInfo = "Specta-iOS";
-		};
-		D01A4A20162C81D60092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9D96A3A14B6B8AB007D9521;
-			remoteInfo = SpectaTests;
-		};
-		D01A4A22162C81D60092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9B777B314BA294C00D8DC76;
-			remoteInfo = "Specta-iOSTests";
-		};
-		D01A4A24162C81E90092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E9ACDF0B13B2DD520010F4D7;
-			remoteInfo = Expecta;
-		};
-		D01A4A26162C81E90092D61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E9D96A2514B6B8AB007D9521;
-			remoteInfo = Specta;
-		};
 		D09AE4FB15C5F45300ECAD10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D09AE4D515C5F45200ECAD10 /* Project object */;
@@ -126,18 +82,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		304692F11607259A00B79746 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTKeyPathCoding.h; path = extobjc/EXTKeyPathCoding.h; sourceTree = "<group>"; };
+		0396050816E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAlignmentAdditions.h"; sourceTree = "<group>"; };
+		0396050916E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAlignmentAdditions.m"; sourceTree = "<group>"; };
+		03ECBD9716FD2E6800DA27D0 /* NSView+RBLAlignmentAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAlignmentAdditionsSpec.m"; sourceTree = "<group>"; };
+		30309E8B17228C1700BC2923 /* RBLTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLTableView.h; sourceTree = "<group>"; };
+		30309E8C17228C1700BC2923 /* RBLTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLTableView.m; sourceTree = "<group>"; };
+		303DEF4216D2B88700BD65C4 /* RBLShadowedTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLShadowedTextFieldCell.h; sourceTree = "<group>"; };
+		303DEF4316D2B88700BD65C4 /* RBLShadowedTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLShadowedTextFieldCell.m; sourceTree = "<group>"; };
 		306A81D91601C7A300BF45F3 /* RBLPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLPopover.h; sourceTree = "<group>"; };
 		306A81DA1601C7A300BF45F3 /* RBLPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLPopover.m; sourceTree = "<group>"; };
 		306A81E61601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+RBLBlockAdditions.h"; sourceTree = "<group>"; };
 		306A81E71601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+RBLBlockAdditions.m"; sourceTree = "<group>"; };
 		306A81EA1601EAE700BF45F3 /* CAAnimation+RBLBlockAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+RBLBlockAdditionsSpec.m"; sourceTree = "<group>"; };
-		306A81EC1601F44200BF45F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7BCDC12B182A430500C9AE23 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Mac-Framework.xcconfig"; path = "/a2z/xcconfigs/Mac OS X/Mac-Framework.xcconfig"; sourceTree = "<absolute>"; };
+		7B3C7374197CA29B0096522C /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Mac-Framework.xcconfig"; path = "/Volumes/2T/ServiceData/AtoZ.framework/Frameworks/CFAAction/../../xcconfigs/Mac OS X/Mac-Framework.xcconfig"; sourceTree = "<absolute>"; };
+		88347E6816F213C500872A0A /* RBLHTMLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLHTMLView.h; sourceTree = "<group>"; };
+		88347E6916F213C500872A0A /* RBLHTMLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLHTMLView.m; sourceTree = "<group>"; };
+		884675FE16F2574200016B56 /* RBLHTMLViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLHTMLViewSpec.m; sourceTree = "<group>"; };
+		AB10DB4B166EA9CA00AB7AB1 /* RBLScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLScrollView.h; sourceTree = "<group>"; };
+		AB10DB4C166EA9CA00AB7AB1 /* RBLScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLScrollView.m; sourceTree = "<group>"; };
+		AB10DB52166EADD000AB7AB1 /* RBLScrollViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLScrollViewSpec.m; sourceTree = "<group>"; };
 		AB61F63416373FE000DD5D2C /* RBLTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLTableCellView.h; sourceTree = "<group>"; };
 		AB61F63516373FE000DD5D2C /* RBLTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLTableCellView.m; sourceTree = "<group>"; };
+		AB61F6D21638370900DD5D2C /* NSApplication+RBLBlockAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+RBLBlockAdditions.h"; sourceTree = "<group>"; };
+		AB61F6D31638370900DD5D2C /* NSApplication+RBLBlockAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+RBLBlockAdditions.m"; sourceTree = "<group>"; };
+		B85EE8EB163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RBObjectSizzlingAdditions.h"; sourceTree = "<group>"; };
+		B85EE8EC163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RBObjectSizzlingAdditions.m"; sourceTree = "<group>"; };
 		D011FD5C16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+RBLResizableImageAdditions.h"; sourceTree = "<group>"; };
 		D011FD5D16239A8600A27946 /* NSImage+RBLResizableImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+RBLResizableImageAdditions.m"; sourceTree = "<group>"; };
+		D03D67161677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+RBLHTMLAdditions.h"; sourceTree = "<group>"; };
+		D03D67171677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+RBLHTMLAdditions.m"; sourceTree = "<group>"; };
+		D03D671A1677E2950041DDF2 /* NSAttributedString+RBLHTMLAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+RBLHTMLAdditionsSpec.m"; sourceTree = "<group>"; };
 		D0410EA915C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+RBLAntialiasingAdditions.h"; sourceTree = "<group>"; };
 		D0410EAA15C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+RBLAntialiasingAdditions.m"; sourceTree = "<group>"; };
 		D04844EC15C5F8DA00834EDE /* RebelTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RebelTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -148,11 +122,13 @@
 		D0723FC415C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+RBLCGColorAdditions.h"; sourceTree = "<group>"; };
 		D0723FC515C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+RBLCGColorAdditions.m"; sourceTree = "<group>"; };
 		D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+RBLCGColorAdditionsSpec.m"; sourceTree = "<group>"; };
-		D0723FDD15C60D61004DBDC7 /* testimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage.jpg; sourceTree = "<group>"; };
 		D0723FDF15C60E94004DBDC7 /* RBLViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLViewSpec.m; sourceTree = "<group>"; };
 		D0723FE115C616AF004DBDC7 /* RBLResizableImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLResizableImage.h; sourceTree = "<group>"; };
 		D0723FE215C616AF004DBDC7 /* RBLResizableImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLResizableImage.m; sourceTree = "<group>"; };
 		D078B7DD15F6DB420063DDD5 /* NSView+RBLAnimationAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditionsSpec.m"; sourceTree = "<group>"; };
+		D088BEF716747D8F004B2665 /* NSFont+RBLFallbackAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFont+RBLFallbackAdditions.h"; sourceTree = "<group>"; };
+		D088BEF816747D8F004B2665 /* NSFont+RBLFallbackAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFont+RBLFallbackAdditions.m"; sourceTree = "<group>"; };
+		D088BEFB16747EE1004B2665 /* NSFont+RBLFallbackAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFont+RBLFallbackAdditionsSpec.m"; sourceTree = "<group>"; };
 		D08BB2DB15CB307200CC9868 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		D08BB2DD15CB307200CC9868 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		D08BB2DE15CB307200CC9868 /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -168,24 +144,28 @@
 		D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
 		D08BB2EC15CB307200CC9868 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		D08BB2ED15CB307200CC9868 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
-		D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = External/expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
-		D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Specta.xcodeproj; path = External/specta/Specta.xcodeproj; sourceTree = "<group>"; };
 		D09AE4DF15C5F45200ECAD10 /* Rebel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rebel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D09AE4E215C5F45200ECAD10 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		D09AE4E515C5F45200ECAD10 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		D09AE4E615C5F45200ECAD10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D09AE4E715C5F45200ECAD10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D09AE4EA15C5F45200ECAD10 /* Rebel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rebel-Info.plist"; sourceTree = "<group>"; };
 		D09AE4EC15C5F45200ECAD10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D09AE4EE15C5F45200ECAD10 /* Rebel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebel-Prefix.pch"; sourceTree = "<group>"; };
 		D09AE4EF15C5F45200ECAD10 /* Rebel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rebel.h; sourceTree = "<group>"; };
-		D09AE4F715C5F45300ECAD10 /* RebelTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RebelTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D09AE4F815C5F45300ECAD10 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D09AE4F715C5F45300ECAD10 /* RebelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RebelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09AE50015C5F45300ECAD10 /* RebelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RebelTests-Info.plist"; sourceTree = "<group>"; };
 		D09AE50215C5F45300ECAD10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0E91C561603CC7600D23E93 /* RBLClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLClipView.h; sourceTree = "<group>"; };
 		D0E91C571603CC7600D23E93 /* RBLClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLClipView.m; sourceTree = "<group>"; };
-		D0E91C5A1603CDC300D23E93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D419E3B5193392AD00F77217 /* RBLOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLOutlineView.h; sourceTree = "<group>"; };
+		D419E3B6193392AD00F77217 /* RBLOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLOutlineView.m; sourceTree = "<group>"; };
+		D4559AE61934C2910051A6BE /* RBLScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLScrolling.h; sourceTree = "<group>"; };
+		D4559AE71934C2910051A6BE /* RBLScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLScrolling.m; sourceTree = "<group>"; };
+		F63D7C77171D31010006515F /* RBLResizableImageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLResizableImageSpec.m; sourceTree = "<group>"; };
+		F63D7C79171D3CCB0006515F /* <RBLResizableImageSpec>_testimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "<RBLResizableImageSpec>_testimage@2x.png"; sourceTree = "<group>"; };
+		F63D7C7A171D3CCB0006515F /* <RBLResizableImageSpec>_testimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "<RBLResizableImageSpec>_testimage.png"; sourceTree = "<group>"; };
+		F63D7C7B171D3CCB0006515F /* <RBLCGColorAdditionsSpec>_testimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "<RBLCGColorAdditionsSpec>_testimage.jpg"; sourceTree = "<group>"; };
+		F64F8DE81797E1F400082A3F /* RBLSlidingContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLSlidingContainerView.h; sourceTree = "<group>"; };
+		F64F8DE91797E1F400082A3F /* RBLSlidingContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLSlidingContainerView.m; sourceTree = "<group>"; };
+		F6A562BE1797DC5A00B651C0 /* RBLExpandingContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLExpandingContainerView.h; sourceTree = "<group>"; };
+		F6A562BF1797DC5A00B651C0 /* RBLExpandingContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLExpandingContainerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +173,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0E91C5B1603CDC300D23E93 /* QuartzCore.framework in Frameworks */,
-				D09AE4E315C5F45200ECAD10 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,11 +180,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D01A4A28162C81EE0092D61F /* libExpecta.a in Frameworks */,
-				D01A4A29162C81EE0092D61F /* libSpecta.a in Frameworks */,
-				301569981602161400E3BE46 /* QuartzCore.framework in Frameworks */,
-				D09AE4F915C5F45300ECAD10 /* SenTestingKit.framework in Frameworks */,
-				D09AE4FA15C5F45300ECAD10 /* Cocoa.framework in Frameworks */,
 				D09AE4FD15C5F45300ECAD10 /* Rebel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,40 +187,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		304692E71607258E00B79746 /* libextobjc */ = {
-			isa = PBXGroup;
-			children = (
-				304692F11607259A00B79746 /* EXTKeyPathCoding.h */,
-			);
-			name = libextobjc;
-			path = External/libextobjc;
-			sourceTree = "<group>";
-		};
-		D01A4A05162C81CC0092D61F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D01A4A0C162C81CC0092D61F /* libExpecta.a */,
-				D01A4A0E162C81CC0092D61F /* libExpecta-iOS.a */,
-				D01A4A10162C81CC0092D61F /* ExpectaTests.octest */,
-				D01A4A12162C81CC0092D61F /* Expecta-iOSTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D01A4A16162C81D60092D61F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D01A4A1D162C81D60092D61F /* libSpecta.a */,
-				D01A4A1F162C81D60092D61F /* libSpecta-iOS.a */,
-				D01A4A21162C81D60092D61F /* SpectaTests.octest */,
-				D01A4A23162C81D60092D61F /* Specta-iOSTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D0723FBD15C5F9CD004DBDC7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F64F8DE81797E1F400082A3F /* RBLSlidingContainerView.h */,
+				F64F8DE91797E1F400082A3F /* RBLSlidingContainerView.m */,
+				F6A562BE1797DC5A00B651C0 /* RBLExpandingContainerView.h */,
+				F6A562BF1797DC5A00B651C0 /* RBLExpandingContainerView.m */,
 				D0E91C561603CC7600D23E93 /* RBLClipView.h */,
 				D0E91C571603CC7600D23E93 /* RBLClipView.m */,
 				D0723FE115C616AF004DBDC7 /* RBLResizableImage.h */,
@@ -258,6 +204,18 @@
 				306A81DA1601C7A300BF45F3 /* RBLPopover.m */,
 				AB61F63416373FE000DD5D2C /* RBLTableCellView.h */,
 				AB61F63516373FE000DD5D2C /* RBLTableCellView.m */,
+				AB10DB4B166EA9CA00AB7AB1 /* RBLScrollView.h */,
+				AB10DB4C166EA9CA00AB7AB1 /* RBLScrollView.m */,
+				303DEF4216D2B88700BD65C4 /* RBLShadowedTextFieldCell.h */,
+				303DEF4316D2B88700BD65C4 /* RBLShadowedTextFieldCell.m */,
+				88347E6816F213C500872A0A /* RBLHTMLView.h */,
+				88347E6916F213C500872A0A /* RBLHTMLView.m */,
+				30309E8B17228C1700BC2923 /* RBLTableView.h */,
+				30309E8C17228C1700BC2923 /* RBLTableView.m */,
+				D419E3B5193392AD00F77217 /* RBLOutlineView.h */,
+				D419E3B6193392AD00F77217 /* RBLOutlineView.m */,
+				D4559AE61934C2910051A6BE /* RBLScrolling.h */,
+				D4559AE71934C2910051A6BE /* RBLScrolling.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -265,16 +223,26 @@
 		D0723FC315C5FB54004DBDC7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				306A81E61601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.h */,
+				306A81E71601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.m */,
+				AB61F6D21638370900DD5D2C /* NSApplication+RBLBlockAdditions.h */,
+				AB61F6D31638370900DD5D2C /* NSApplication+RBLBlockAdditions.m */,
+				D03D67161677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.h */,
+				D03D67171677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.m */,
 				D0723FC415C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h */,
 				D0723FC515C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m */,
+				D088BEF716747D8F004B2665 /* NSFont+RBLFallbackAdditions.h */,
+				D088BEF816747D8F004B2665 /* NSFont+RBLFallbackAdditions.m */,
 				D011FD5C16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h */,
 				D011FD5D16239A8600A27946 /* NSImage+RBLResizableImageAdditions.m */,
 				D0410EA915C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.h */,
 				D0410EAA15C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.m */,
 				D04CBFC615F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h */,
 				D04CBFC715F6D87B004A5BCC /* NSView+RBLAnimationAdditions.m */,
-				306A81E61601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.h */,
-				306A81E71601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.m */,
+				B85EE8EB163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h */,
+				B85EE8EC163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m */,
+				0396050816E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.h */,
+				0396050916E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -282,10 +250,16 @@
 		D0723FDA15C60815004DBDC7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */,
 				306A81EA1601EAE700BF45F3 /* CAAnimation+RBLBlockAdditionsSpec.m */,
+				D03D671A1677E2950041DDF2 /* NSAttributedString+RBLHTMLAdditionsSpec.m */,
+				D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */,
+				D088BEFB16747EE1004B2665 /* NSFont+RBLFallbackAdditionsSpec.m */,
 				D078B7DD15F6DB420063DDD5 /* NSView+RBLAnimationAdditionsSpec.m */,
+				AB10DB52166EADD000AB7AB1 /* RBLScrollViewSpec.m */,
 				D0723FDF15C60E94004DBDC7 /* RBLViewSpec.m */,
+				03ECBD9716FD2E6800DA27D0 /* NSView+RBLAlignmentAdditionsSpec.m */,
+				884675FE16F2574200016B56 /* RBLHTMLViewSpec.m */,
+				F63D7C77171D31010006515F /* RBLResizableImageSpec.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -298,7 +272,7 @@
 				D08BB2E715CB307200CC9868 /* Mac OS X */,
 				D08BB2ED15CB307200CC9868 /* README.md */,
 			);
-			path = Configuration;
+			path = External/xcconfigs;
 			sourceTree = "<group>";
 		};
 		D08BB2DA15CB307200CC9868 /* Base */ = {
@@ -355,47 +329,22 @@
 		D09AE4D315C5F45200ECAD10 = {
 			isa = PBXGroup;
 			children = (
-				7BCDC12B182A430500C9AE23 /* Mac-Framework.xcconfig */,
+				7B3C7374197CA29B0096522C /* Mac-Framework.xcconfig */,
 				D09AE4E815C5F45200ECAD10 /* Rebel */,
 				D09AE4FE15C5F45300ECAD10 /* RebelTests */,
-				D09AE4E115C5F45200ECAD10 /* Frameworks */,
 				D08BB2D915CB307200CC9868 /* Configuration */,
 				D09AE4E015C5F45200ECAD10 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		D09AE4E015C5F45200ECAD10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				D09AE4DF15C5F45200ECAD10 /* Rebel.framework */,
-				D09AE4F715C5F45300ECAD10 /* RebelTests.octest */,
+				D09AE4F715C5F45300ECAD10 /* RebelTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D09AE4E115C5F45200ECAD10 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				304692E71607258E00B79746 /* libextobjc */,
-				D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */,
-				D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */,
-				306A81EC1601F44200BF45F3 /* QuartzCore.framework */,
-				D09AE4E215C5F45200ECAD10 /* Cocoa.framework */,
-				D09AE4F815C5F45300ECAD10 /* SenTestingKit.framework */,
-				D0E91C5A1603CDC300D23E93 /* QuartzCore.framework */,
-				D09AE4E415C5F45200ECAD10 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D09AE4E415C5F45200ECAD10 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D09AE4E515C5F45200ECAD10 /* AppKit.framework */,
-				D09AE4E615C5F45200ECAD10 /* CoreData.framework */,
-				D09AE4E715C5F45200ECAD10 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		D09AE4E815C5F45200ECAD10 /* Rebel */ = {
@@ -422,6 +371,7 @@
 		D09AE4FE15C5F45300ECAD10 /* RebelTests */ = {
 			isa = PBXGroup;
 			children = (
+				F63D7C6D171D2F840006515F /* Test Images */,
 				D0723FDA15C60815004DBDC7 /* Classes */,
 				D09AE4FF15C5F45300ECAD10 /* Supporting Files */,
 			);
@@ -431,12 +381,21 @@
 		D09AE4FF15C5F45300ECAD10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D0723FDD15C60D61004DBDC7 /* testimage.jpg */,
 				D09AE50015C5F45300ECAD10 /* RebelTests-Info.plist */,
 				D09AE50115C5F45300ECAD10 /* InfoPlist.strings */,
 				D04844EC15C5F8DA00834EDE /* RebelTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F63D7C6D171D2F840006515F /* Test Images */ = {
+			isa = PBXGroup;
+			children = (
+				F63D7C7A171D3CCB0006515F /* <RBLResizableImageSpec>_testimage.png */,
+				F63D7C79171D3CCB0006515F /* <RBLResizableImageSpec>_testimage@2x.png */,
+				F63D7C7B171D3CCB0006515F /* <RBLCGColorAdditionsSpec>_testimage.jpg */,
+			);
+			name = "Test Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,10 +412,22 @@
 				D04CBFC815F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h in Headers */,
 				306A81E81601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.h in Headers */,
 				306A81DB1601C7A300BF45F3 /* RBLPopover.h in Headers */,
-				304692F21607259A00B79746 /* EXTKeyPathCoding.h in Headers */,
 				D0E91C581603CC7600D23E93 /* RBLClipView.h in Headers */,
 				D011FD5E16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h in Headers */,
 				AB61F63616373FE000DD5D2C /* RBLTableCellView.h in Headers */,
+				F64F8DEA1797E1F400082A3F /* RBLSlidingContainerView.h in Headers */,
+				F6A562C01797DC5A00B651C0 /* RBLExpandingContainerView.h in Headers */,
+				D4559AE81934C2910051A6BE /* RBLScrolling.h in Headers */,
+				B85EE8ED163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h in Headers */,
+				AB61F6D41638370900DD5D2C /* NSApplication+RBLBlockAdditions.h in Headers */,
+				88347E6A16F213C500872A0A /* RBLHTMLView.h in Headers */,
+				D419E3B7193392AD00F77217 /* RBLOutlineView.h in Headers */,
+				AB10DB4D166EA9CA00AB7AB1 /* RBLScrollView.h in Headers */,
+				30309E8D17228C1700BC2923 /* RBLTableView.h in Headers */,
+				303DEF4416D2B88700BD65C4 /* RBLShadowedTextFieldCell.h in Headers */,
+				D088BEF916747D8F004B2665 /* NSFont+RBLFallbackAdditions.h in Headers */,
+				D03D67181677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.h in Headers */,
+				0396050A16E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,19 +459,16 @@
 				D09AE4F215C5F45300ECAD10 /* Sources */,
 				D09AE4F315C5F45300ECAD10 /* Frameworks */,
 				D09AE4F415C5F45300ECAD10 /* Resources */,
-				D09AE4F515C5F45300ECAD10 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D01A4A25162C81E90092D61F /* PBXTargetDependency */,
-				D01A4A27162C81E90092D61F /* PBXTargetDependency */,
 				D09AE4FC15C5F45300ECAD10 /* PBXTargetDependency */,
 			);
 			name = RebelTests;
 			productName = RebelTests;
-			productReference = D09AE4F715C5F45300ECAD10 /* RebelTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = D09AE4F715C5F45300ECAD10 /* RebelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -508,7 +476,8 @@
 		D09AE4D515C5F45200ECAD10 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = GitHub;
 			};
 			buildConfigurationList = D09AE4D815C5F45200ECAD10 /* Build configuration list for PBXProject "Rebel" */;
@@ -521,16 +490,6 @@
 			mainGroup = D09AE4D315C5F45200ECAD10;
 			productRefGroup = D09AE4E015C5F45200ECAD10 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D01A4A05162C81CC0092D61F /* Products */;
-					ProjectRef = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
-				},
-				{
-					ProductGroup = D01A4A16162C81D60092D61F /* Products */;
-					ProjectRef = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D09AE4DE15C5F45200ECAD10 /* Rebel */,
@@ -538,65 +497,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D01A4A0C162C81CC0092D61F /* libExpecta.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libExpecta.a;
-			remoteRef = D01A4A0B162C81CC0092D61F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D01A4A0E162C81CC0092D61F /* libExpecta-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libExpecta-iOS.a";
-			remoteRef = D01A4A0D162C81CC0092D61F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D01A4A10162C81CC0092D61F /* ExpectaTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ExpectaTests.octest;
-			remoteRef = D01A4A0F162C81CC0092D61F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D01A4A12162C81CC0092D61F /* Expecta-iOSTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Expecta-iOSTests.octest";
-			remoteRef = D01A4A11162C81CC0092D61F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D01A4A1D162C81D60092D61F /* libSpecta.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSpecta.a;
-			remoteRef = D01A4A1C162C81D60092D61F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D01A4A1F162C81D60092D61F /* libSpecta-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libSpecta-iOS.a";
-			remoteRef = D01A4A1E162C81D60092D61F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D01A4A21162C81D60092D61F /* SpectaTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SpectaTests.octest;
-			remoteRef = D01A4A20162C81D60092D61F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D01A4A23162C81D60092D61F /* Specta-iOSTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Specta-iOSTests.octest";
-			remoteRef = D01A4A22162C81D60092D61F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D09AE4DD15C5F45200ECAD10 /* Resources */ = {
@@ -612,27 +512,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D09AE50315C5F45300ECAD10 /* InfoPlist.strings in Resources */,
-				D0723FDE15C60D61004DBDC7 /* testimage.jpg in Resources */,
+				F63D7C7C171D3CCB0006515F /* <RBLResizableImageSpec>_testimage@2x.png in Resources */,
+				F63D7C7D171D3CCB0006515F /* <RBLResizableImageSpec>_testimage.png in Resources */,
+				F63D7C7E171D3CCB0006515F /* <RBLCGColorAdditionsSpec>_testimage.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D09AE4F515C5F45300ECAD10 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D09AE4DA15C5F45200ECAD10 /* Sources */ = {
@@ -645,10 +531,23 @@
 				D0410EAC15C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.m in Sources */,
 				D04CBFC915F6D87B004A5BCC /* NSView+RBLAnimationAdditions.m in Sources */,
 				306A81DC1601C7A300BF45F3 /* RBLPopover.m in Sources */,
+				D419E3B8193392AD00F77217 /* RBLOutlineView.m in Sources */,
 				306A81E91601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.m in Sources */,
 				D0E91C591603CC7600D23E93 /* RBLClipView.m in Sources */,
 				D011FD5F16239A8600A27946 /* NSImage+RBLResizableImageAdditions.m in Sources */,
 				AB61F63716373FE000DD5D2C /* RBLTableCellView.m in Sources */,
+				F64F8DEB1797E1F400082A3F /* RBLSlidingContainerView.m in Sources */,
+				D4559AE91934C2910051A6BE /* RBLScrolling.m in Sources */,
+				B85EE8EE163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m in Sources */,
+				AB61F6D51638370900DD5D2C /* NSApplication+RBLBlockAdditions.m in Sources */,
+				AB10DB4E166EA9CA00AB7AB1 /* RBLScrollView.m in Sources */,
+				D088BEFA16747D8F004B2665 /* NSFont+RBLFallbackAdditions.m in Sources */,
+				D03D67191677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.m in Sources */,
+				303DEF4516D2B88700BD65C4 /* RBLShadowedTextFieldCell.m in Sources */,
+				F6A562C11797DC5A00B651C0 /* RBLExpandingContainerView.m in Sources */,
+				0396050B16E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.m in Sources */,
+				88347E6B16F213C500872A0A /* RBLHTMLView.m in Sources */,
+				30309E8E17228C1700BC2923 /* RBLTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,22 +559,18 @@
 				D0723FE015C60E94004DBDC7 /* RBLViewSpec.m in Sources */,
 				D078B7DE15F6DB420063DDD5 /* NSView+RBLAnimationAdditionsSpec.m in Sources */,
 				306A81EB1601EAE700BF45F3 /* CAAnimation+RBLBlockAdditionsSpec.m in Sources */,
+				AB10DB53166EADD000AB7AB1 /* RBLScrollViewSpec.m in Sources */,
+				D088BEFC16747EE1004B2665 /* NSFont+RBLFallbackAdditionsSpec.m in Sources */,
+				D03D671B1677E2950041DDF2 /* NSAttributedString+RBLHTMLAdditionsSpec.m in Sources */,
+				03ECBD9816FD2E6800DA27D0 /* NSView+RBLAlignmentAdditionsSpec.m in Sources */,
+				884675FF16F2574200016B56 /* RBLHTMLViewSpec.m in Sources */,
+				F63D7C78171D31010006515F /* RBLResizableImageSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D01A4A25162C81E90092D61F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Expecta;
-			targetProxy = D01A4A24162C81E90092D61F /* PBXContainerItemProxy */;
-		};
-		D01A4A27162C81E90092D61F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Specta;
-			targetProxy = D01A4A26162C81E90092D61F /* PBXContainerItemProxy */;
-		};
 		D09AE4FC15C5F45300ECAD10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D09AE4DE15C5F45200ECAD10 /* Rebel */;
@@ -707,11 +602,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2DE15CB307200CC9868 /* Profile.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = macosx;
@@ -720,12 +615,8 @@
 		};
 		D04844AE15C5F68400834EDE /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BCDC12B182A430500C9AE23 /* Mac-Framework.xcconfig */;
+			baseConfigurationReference = 7B3C7374197CA29B0096522C /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_MODULES_AUTOLINK = NO;
-				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -746,8 +637,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2E815CB307200CC9868 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PREFIX_HEADER = "RebelTests/RebelTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/specta/src,
@@ -756,7 +649,6 @@
 				INFOPLIST_FILE = "RebelTests/RebelTests-Info.plist";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Profile;
 		};
@@ -764,11 +656,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2DD15CB307200CC9868 /* Debug.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -780,11 +672,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2DF15CB307200CC9868 /* Release.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = macosx;
@@ -793,12 +685,8 @@
 		};
 		D09AE50A15C5F45300ECAD10 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BCDC12B182A430500C9AE23 /* Mac-Framework.xcconfig */;
+			baseConfigurationReference = 7B3C7374197CA29B0096522C /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_MODULES_AUTOLINK = NO;
-				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -817,12 +705,8 @@
 		};
 		D09AE50B15C5F45300ECAD10 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BCDC12B182A430500C9AE23 /* Mac-Framework.xcconfig */;
+			baseConfigurationReference = 7B3C7374197CA29B0096522C /* Mac-Framework.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_MODULES_AUTOLINK = NO;
-				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -843,8 +727,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2E815CB307200CC9868 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PREFIX_HEADER = "RebelTests/RebelTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/specta/src,
@@ -853,7 +739,6 @@
 				INFOPLIST_FILE = "RebelTests/RebelTests-Info.plist";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -861,8 +746,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2E815CB307200CC9868 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PREFIX_HEADER = "RebelTests/RebelTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/specta/src,
@@ -871,7 +758,6 @@
 				INFOPLIST_FILE = "RebelTests/RebelTests-Info.plist";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

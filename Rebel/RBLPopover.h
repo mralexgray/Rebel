@@ -7,62 +7,71 @@
 //
 
 #import <Foundation/Foundation.h>
-
-#import "RBLView.h"
+#import <Rebel/RBLView.h>
 
 @class RBLPopover;
 @class RBLPopoverBackgroundView;
 
 // Defines the different types of behavior of a RBLPopover.
 //
-// RBLPopoverViewControllerBehaviorApplicationDefined - The application decides
-//                                                      when the popover should
-//                                                      open and close, by doing
-//                                                      so manually.
-// RBLPopoverViewControllerBehaviorTransient          - If there is a mouse
-//                                                      click anywhere other
-//                                                      than in the popover the
-//                                                      popover is closed.
-// RBLPopoverViewControllerBehaviorSemiTransient      - Unsupported, here for
-//                                                      forwards compatibility.
-//                                                      Any use of this degrades
-//                                                      gracefully into
-//                                                      transient behavior.
+// RBLPopoverBehaviorApplicationDefined - The application decides when the
+//                                        popover should open and close, by
+//                                        doing so manually.
+// RBLPopoverBehaviorTransient          - If there is a mouse down anywhere
+//                                        other than in the popover the popover
+//                                        is closed. It is also closed if the
+//                                        app or parent window lose focus or
+//                                        `esc` is pressed.
+// RBLPopoverBehaviorSemiTransient      - Closes the popover only if there is a
+//                                        mouse up within the popover's parent
+//                                        window or `esc` is pressed.
 typedef enum : NSUInteger {
-	RBLPopoverViewControllerBehaviorApplicationDefined = 0,
-	RBLPopoverViewControllerBehaviorTransient = 1,
-	RBLPopoverViewControllerBehaviorSemiTransient = 2
-} RBLPopoverViewControllerBehavior;
+	RBLPopoverBehaviorApplicationDefined = 0,
+	RBLPopoverBehaviorTransient = 1,
+	RBLPopoverBehaviorSemiTransient = 2
+} RBLPopoverBehavior;
 
 typedef void (^RBLPopoverDelegateBlock)(RBLPopover *popover);
 
 // A popover.
 // This aims to replicate the API of `NSPopover`, within reason, whilst offering
-// more flexibility when it comes to customising of it's appearance.
+// more flexibility when it comes to customising of its appearance.
+//
+// One notable difference in behaviour when compared to `NSPopover` is memory
+// management. `RBLPopover` does not retain itself and when it deallocates it
+// will be removed from screen. Therefore a reference must be kept to the popover
+// (or it should be otherwise retained) for as long as it should appear on
+// screen.
 //
 // A note on layers: by default the clipping method which the popover uses to
-// clip it's subviews to it's outline does _not_ support any layer backed or
+// clip its subviews to its outline does _not_ support any layer backed or
 // hosting views. This can be worked around by adding mask layers to any layers
-// you add to the popover or it's subviews.
+// you add to the popover or its subviews.
 @interface RBLPopover : NSResponder
 
 // The view controller providing the view displayed within the popover.
 @property (nonatomic, strong) NSViewController *contentViewController;
 
-// The class of which an instance is created which sits behind the
-// `contentViewController`'s view. This is useful for customising the appearance
-// of the popover.
-// Note that this must be a subclass of `RBLPopoverBackgroundView`.
-@property (nonatomic, strong) Class backgroundViewClass;
-
-// The popover's background view.
-// This will be nil before the popover has been opened, after that point it will
-// be an instance of the popover's `backgroundViewClass`.
-@property (nonatomic, readonly, strong) RBLPopoverBackgroundView *backgroundView;
+// The popover's background view. You may set your own view, which is useful for
+// customizing the appearance of the popover.
+@property (nonatomic, strong, readonly) RBLPopoverBackgroundView *backgroundView;
 
 // The size that, when displayed, the popover's content should be.
 // Passing `CGSizeZero` uses the size of the `contentViewController`'s view.
 @property (nonatomic) CGSize contentSize;
+
+/// The anchor point of the popover in unit coordinate space.
+///
+/// This specifies the alignment of the popover to the origin view along the
+/// secondary axis. If the popover is on the Y edge, this will determine the X
+/// position of the popover; it it's on the X edge, it will determine the Y
+/// position.
+///
+/// A 0 will align the left or bottom edges of the popover and the origin view.
+/// A 1 will align the right or top edges.
+///
+/// The default value is (0.5, 0.5), indicating the center of the popover.
+@property (nonatomic, assign) CGPoint anchorPoint;
 
 // Whether the next open/close of the popover should be animated.
 // Note that this property is checked just before the animation is performed.
@@ -72,9 +81,9 @@ typedef void (^RBLPopoverDelegateBlock)(RBLPopover *popover);
 
 // How the popover should respond to user events, in regard to automatically
 // closing the popover.
-// See the definition of `RBLPopoverViewControllerBehavior` for more
+// See the definition of `RBLPopoverBehavior` for more
 // information.
-@property (nonatomic) RBLPopoverViewControllerBehavior behavior;
+@property (nonatomic) RBLPopoverBehavior behavior;
 
 // Whether the popover is currently visible.
 @property (nonatomic, readonly, getter = isShown) BOOL shown;
@@ -95,10 +104,21 @@ typedef void (^RBLPopoverDelegateBlock)(RBLPopover *popover);
 // animation has successfully completed.
 @property (nonatomic, copy) RBLPopoverDelegateBlock didShowBlock;
 
+// Use for animation when showing and closing the popover.
+@property (nonatomic, assign) NSTimeInterval fadeDuration;
+
+// Whether the popover can become the key window.
+//
+// Defaults to `NO`.
+@property (nonatomic, assign) BOOL canBecomeKey;
+
+// Returns a newly initialised `RBLPopover` with a `RBLPopoverBackgroundView`.
+- (instancetype)initWithContentViewController:(NSViewController *)viewController;
+
 // Designated initialiser.
 //
 // Returns a newly initialised `RBLPopover`.
-- (instancetype)initWithContentViewController:(NSViewController *)viewController;
+- (instancetype)initWithContentViewController:(NSViewController *)viewController backgroundView:(RBLPopoverBackgroundView *)backgroundView;
 
 // Displays the popover
 //
@@ -116,15 +136,8 @@ typedef void (^RBLPopoverDelegateBlock)(RBLPopover *popover);
 //                   popover to fit on the screen, preferredEdge is used.
 - (void)showRelativeToRect:(CGRect)positioningRect ofView:(NSView *)positioningView preferredEdge:(CGRectEdge)preferredEdge;
 
-// Closes the popover with the default fadeout duration (if the popover
-// animates).
+// Closes the popover with the `fadeDuration` (if the popover animates).
 - (void)close;
-
-// Closes the popover with the given duration. If animates is set to NO the
-// popover closes immediately.
-//
-// duration - The duration of the fade animation.
-- (void)closeWithFadeoutDuration:(NSTimeInterval)duration;
 
 // Convenience method exposed for nib files.
 - (IBAction)performClose:(id)sender;
@@ -140,7 +153,7 @@ typedef void (^RBLPopoverDelegateBlock)(RBLPopover *popover);
 // popoverEdge - The edge that is adjacent to the `positioningRect`.
 //
 // Returns the overall size of the backgroundView as a `CGSize`.
-+ (CGSize)sizeForBackgroundViewWithContentSize:(CGSize)contentSize popoverEdge:(CGRectEdge)popoverEdge;
+- (CGSize)sizeForBackgroundViewWithContentSize:(CGSize)contentSize popoverEdge:(CGRectEdge)popoverEdge;
 
 // Given a frame for the background this should be overridden by subclasses to
 // describe where the content should fit within the popover.
@@ -152,17 +165,7 @@ typedef void (^RBLPopoverDelegateBlock)(RBLPopover *popover);
 //
 // Returns the frame of the content relative to the given background view frame
 // as a `CGRect`.
-+ (CGRect)contentViewFrameForBackgroundFrame:(CGRect)frame popoverEdge:(CGRectEdge)popoverEdge;
-
-// The designated initialiser.
-//
-// frame            - The frame of the background view.
-// popoverEdge      - The edge that is adjacent to the `positioningRect`.
-// originScreenRect - The frame of the screen which the popover has originated
-//                    on.
-//
-// Returns a newly initialised instance of `RBLPopoverBackgroundView`.
-- (instancetype)initWithFrame:(CGRect)frame popoverEdge:(CGRectEdge)popoverEdge originScreenRect:(CGRect)originScreenRect;
+- (CGRect)contentViewFrameForBackgroundFrame:(CGRect)frame popoverEdge:(CGRectEdge)popoverEdge;
 
 // The outline shape of a popover.
 // This can be overridden by subclasses if they wish to change the shape of the
@@ -174,8 +177,19 @@ typedef void (^RBLPopoverDelegateBlock)(RBLPopover *popover);
 // Returns a `CGPathRef` of the outline of the background view.
 - (CGPathRef)newPopoverPathForEdge:(CGRectEdge)popoverEdge inFrame:(CGRect)frame;
 
-// The edge of the target view which the popover is appearing next to.
-@property (nonatomic) CGRectEdge popoverEdge;
+// The edge of the target view which the popover is appearing next to. This will
+// be set by the popover.
+@property (nonatomic, assign, readonly) CGRectEdge popoverEdge;
+
+// The rectangle, in screen coordinates, where the popover originated. This will
+// be set by the popover.
+@property (nonatomic, assign, readonly) NSRect popoverOrigin;
+
+// The size of the arrow used to indicate the origin of the popover.
+//
+// Note that the height will always be the distance from the view to the tip of
+// the arrow.
+@property (nonatomic, assign) CGSize arrowSize;
 
 // The color used to fill the shape of the background view.
 @property (nonatomic, strong) NSColor *fillColor;
