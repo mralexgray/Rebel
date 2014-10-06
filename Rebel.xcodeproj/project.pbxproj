@@ -31,21 +31,29 @@
 		AB61F63716373FE000DD5D2C /* RBLTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61F63516373FE000DD5D2C /* RBLTableCellView.m */; };
 		AB61F6D41638370900DD5D2C /* NSApplication+RBLBlockAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AB61F6D21638370900DD5D2C /* NSApplication+RBLBlockAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB61F6D51638370900DD5D2C /* NSApplication+RBLBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61F6D31638370900DD5D2C /* NSApplication+RBLBlockAdditions.m */; };
+		B85EE8DE163ECA8C00265870 /* RBLViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B85EE8DC163ECA8C00265870 /* RBLViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B85EE8DF163ECA8C00265870 /* RBLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE8DD163ECA8C00265870 /* RBLViewController.m */; };
+		B85EE8E9163ECF4C00265870 /* NSView+RBLViewControllerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B85EE8E7163ECF4B00265870 /* NSView+RBLViewControllerAdditions.h */; };
+		B85EE8EA163ECF4C00265870 /* NSView+RBLViewControllerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE8E8163ECF4C00265870 /* NSView+RBLViewControllerAdditions.m */; };
 		B85EE8ED163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B85EE8EB163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h */; };
 		B85EE8EE163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B85EE8EC163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m */; };
-		BE17699A1975D93900EE78ED /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1769991975D93900EE78ED /* libSpecta-OSX.a */; };
 		D011FD5E16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D011FD5C16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D011FD5F16239A8600A27946 /* NSImage+RBLResizableImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D011FD5D16239A8600A27946 /* NSImage+RBLResizableImageAdditions.m */; };
+		D01A4A28162C81EE0092D61F /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D01A4A0C162C81CC0092D61F /* libExpecta.a */; };
+		D01A4A29162C81EE0092D61F /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D01A4A1D162C81D60092D61F /* libSpecta.a */; };
 		D03D67181677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D03D67161677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D03D67191677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D67171677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.m */; };
 		D03D671B1677E2950041DDF2 /* NSAttributedString+RBLHTMLAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D671A1677E2950041DDF2 /* NSAttributedString+RBLHTMLAdditionsSpec.m */; };
 		D0410EAC15C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0410EAA15C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.m */; };
 		D04CBFC815F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D04CBFC615F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D04CBFC915F6D87B004A5BCC /* NSView+RBLAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D04CBFC715F6D87B004A5BCC /* NSView+RBLAnimationAdditions.m */; };
+		D0723FC015C5F9D8004DBDC7 /* RBLView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0723FBE15C5F9D8004DBDC7 /* RBLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0723FC115C5F9D8004DBDC7 /* RBLView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FBF15C5F9D8004DBDC7 /* RBLView.m */; };
 		D0723FC215C5FA13004DBDC7 /* Rebel.h in Headers */ = {isa = PBXBuildFile; fileRef = D09AE4EF15C5F45200ECAD10 /* Rebel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0723FC615C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D0723FC415C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0723FC715C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FC515C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D0723FDC15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */; };
+		D0723FDE15C60D61004DBDC7 /* testimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0723FDD15C60D61004DBDC7 /* testimage.jpg */; };
 		D0723FE015C60E94004DBDC7 /* RBLViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FDF15C60E94004DBDC7 /* RBLViewSpec.m */; };
 		D0723FE315C616AF004DBDC7 /* RBLResizableImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D0723FE115C616AF004DBDC7 /* RBLResizableImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0723FE415C616AF004DBDC7 /* RBLResizableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0723FE215C616AF004DBDC7 /* RBLResizableImage.m */; };
@@ -55,17 +63,13 @@
 		D088BEFC16747EE1004B2665 /* NSFont+RBLFallbackAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D088BEFB16747EE1004B2665 /* NSFont+RBLFallbackAdditionsSpec.m */; };
 		D09AE4E315C5F45200ECAD10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AE4E215C5F45200ECAD10 /* Cocoa.framework */; };
 		D09AE4ED15C5F45200ECAD10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D09AE4EB15C5F45200ECAD10 /* InfoPlist.strings */; };
+		D09AE4F915C5F45300ECAD10 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AE4F815C5F45300ECAD10 /* SenTestingKit.framework */; };
 		D09AE4FA15C5F45300ECAD10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AE4E215C5F45200ECAD10 /* Cocoa.framework */; };
 		D09AE4FD15C5F45300ECAD10 /* Rebel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AE4DF15C5F45200ECAD10 /* Rebel.framework */; };
 		D09AE50315C5F45300ECAD10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D09AE50115C5F45300ECAD10 /* InfoPlist.strings */; };
 		D0E91C581603CC7600D23E93 /* RBLClipView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E91C561603CC7600D23E93 /* RBLClipView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0E91C591603CC7600D23E93 /* RBLClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E91C571603CC7600D23E93 /* RBLClipView.m */; };
 		D0E91C5B1603CDC300D23E93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E91C5A1603CDC300D23E93 /* QuartzCore.framework */; };
-		D419E3B7193392AD00F77217 /* RBLOutlineView.h in Headers */ = {isa = PBXBuildFile; fileRef = D419E3B5193392AD00F77217 /* RBLOutlineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D419E3B8193392AD00F77217 /* RBLOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = D419E3B6193392AD00F77217 /* RBLOutlineView.m */; };
-		D4559AE81934C2910051A6BE /* RBLScrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = D4559AE61934C2910051A6BE /* RBLScrolling.h */; };
-		D4559AE91934C2910051A6BE /* RBLScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = D4559AE71934C2910051A6BE /* RBLScrolling.m */; };
-		D4ACA4CB18DB95F900EBD899 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ACA4CA18DB95F900EBD899 /* libExpecta.a */; };
 		F63D7C78171D31010006515F /* RBLResizableImageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F63D7C77171D31010006515F /* RBLResizableImageSpec.m */; };
 		F63D7C7C171D3CCB0006515F /* <RBLResizableImageSpec>_testimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F63D7C79171D3CCB0006515F /* <RBLResizableImageSpec>_testimage@2x.png */; };
 		F63D7C7D171D3CCB0006515F /* <RBLResizableImageSpec>_testimage.png in Resources */ = {isa = PBXBuildFile; fileRef = F63D7C7A171D3CCB0006515F /* <RBLResizableImageSpec>_testimage.png */; };
@@ -77,6 +81,76 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D01A4A0B162C81CC0092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9ACDF0C13B2DD520010F4D7;
+			remoteInfo = Expecta;
+		};
+		D01A4A0D162C81CC0092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067CE13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOS";
+		};
+		D01A4A0F162C81CC0092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9ACDF1D13B2DD520010F4D7;
+			remoteInfo = ExpectaTests;
+		};
+		D01A4A11162C81CC0092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067DA13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOSTests";
+		};
+		D01A4A1C162C81D60092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9D96A2614B6B8AB007D9521;
+			remoteInfo = Specta;
+		};
+		D01A4A1E162C81D60092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9B777A414BA294B00D8DC76;
+			remoteInfo = "Specta-iOS";
+		};
+		D01A4A20162C81D60092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9D96A3A14B6B8AB007D9521;
+			remoteInfo = SpectaTests;
+		};
+		D01A4A22162C81D60092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9B777B314BA294C00D8DC76;
+			remoteInfo = "Specta-iOSTests";
+		};
+		D01A4A24162C81E90092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E9ACDF0B13B2DD520010F4D7;
+			remoteInfo = Expecta;
+		};
+		D01A4A26162C81E90092D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E9D96A2514B6B8AB007D9521;
+			remoteInfo = Specta;
+		};
 		D09AE4FB15C5F45300ECAD10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D09AE4D515C5F45200ECAD10 /* Project object */;
@@ -111,9 +185,12 @@
 		AB61F63516373FE000DD5D2C /* RBLTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLTableCellView.m; sourceTree = "<group>"; };
 		AB61F6D21638370900DD5D2C /* NSApplication+RBLBlockAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+RBLBlockAdditions.h"; sourceTree = "<group>"; };
 		AB61F6D31638370900DD5D2C /* NSApplication+RBLBlockAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+RBLBlockAdditions.m"; sourceTree = "<group>"; };
+		B85EE8DC163ECA8C00265870 /* RBLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLViewController.h; sourceTree = "<group>"; };
+		B85EE8DD163ECA8C00265870 /* RBLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLViewController.m; sourceTree = "<group>"; };
+		B85EE8E7163ECF4B00265870 /* NSView+RBLViewControllerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLViewControllerAdditions.h"; sourceTree = "<group>"; };
+		B85EE8E8163ECF4C00265870 /* NSView+RBLViewControllerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLViewControllerAdditions.m"; sourceTree = "<group>"; };
 		B85EE8EB163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RBObjectSizzlingAdditions.h"; sourceTree = "<group>"; };
 		B85EE8EC163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RBObjectSizzlingAdditions.m"; sourceTree = "<group>"; };
-		BE1769991975D93900EE78ED /* libSpecta-OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libSpecta-OSX.a"; path = "External/specta/build/Debug/libSpecta-OSX.a"; sourceTree = "<group>"; };
 		D011FD5C16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+RBLResizableImageAdditions.h"; sourceTree = "<group>"; };
 		D011FD5D16239A8600A27946 /* NSImage+RBLResizableImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+RBLResizableImageAdditions.m"; sourceTree = "<group>"; };
 		D03D67161677E13F0041DDF2 /* NSAttributedString+RBLHTMLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+RBLHTMLAdditions.h"; sourceTree = "<group>"; };
@@ -124,9 +201,12 @@
 		D04844EC15C5F8DA00834EDE /* RebelTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RebelTests-Prefix.pch"; sourceTree = "<group>"; };
 		D04CBFC615F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+RBLAnimationAdditions.h"; sourceTree = "<group>"; };
 		D04CBFC715F6D87B004A5BCC /* NSView+RBLAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+RBLAnimationAdditions.m"; sourceTree = "<group>"; };
+		D0723FBE15C5F9D8004DBDC7 /* RBLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLView.h; sourceTree = "<group>"; };
+		D0723FBF15C5F9D8004DBDC7 /* RBLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLView.m; sourceTree = "<group>"; };
 		D0723FC415C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+RBLCGColorAdditions.h"; sourceTree = "<group>"; };
 		D0723FC515C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+RBLCGColorAdditions.m"; sourceTree = "<group>"; };
 		D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+RBLCGColorAdditionsSpec.m"; sourceTree = "<group>"; };
+		D0723FDD15C60D61004DBDC7 /* testimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimage.jpg; sourceTree = "<group>"; };
 		D0723FDF15C60E94004DBDC7 /* RBLViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLViewSpec.m; sourceTree = "<group>"; };
 		D0723FE115C616AF004DBDC7 /* RBLResizableImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLResizableImage.h; sourceTree = "<group>"; };
 		D0723FE215C616AF004DBDC7 /* RBLResizableImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLResizableImage.m; sourceTree = "<group>"; };
@@ -148,7 +228,9 @@
 		D08BB2EA15CB307200CC9868 /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
 		D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
 		D08BB2EC15CB307200CC9868 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
-		D08BB2ED15CB307200CC9868 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D08BB2ED15CB307200CC9868 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
+		D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = External/expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
+		D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Specta.xcodeproj; path = External/specta/Specta.xcodeproj; sourceTree = "<group>"; };
 		D09AE4DF15C5F45200ECAD10 /* Rebel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rebel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09AE4E215C5F45200ECAD10 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D09AE4E515C5F45200ECAD10 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -158,18 +240,13 @@
 		D09AE4EC15C5F45200ECAD10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D09AE4EE15C5F45200ECAD10 /* Rebel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebel-Prefix.pch"; sourceTree = "<group>"; };
 		D09AE4EF15C5F45200ECAD10 /* Rebel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rebel.h; sourceTree = "<group>"; };
-		D09AE4F715C5F45300ECAD10 /* RebelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RebelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09AE4F715C5F45300ECAD10 /* RebelTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RebelTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09AE4F815C5F45300ECAD10 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D09AE50015C5F45300ECAD10 /* RebelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RebelTests-Info.plist"; sourceTree = "<group>"; };
 		D09AE50215C5F45300ECAD10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0E91C561603CC7600D23E93 /* RBLClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLClipView.h; sourceTree = "<group>"; };
 		D0E91C571603CC7600D23E93 /* RBLClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLClipView.m; sourceTree = "<group>"; };
 		D0E91C5A1603CDC300D23E93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D419E3B5193392AD00F77217 /* RBLOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLOutlineView.h; sourceTree = "<group>"; };
-		D419E3B6193392AD00F77217 /* RBLOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLOutlineView.m; sourceTree = "<group>"; };
-		D4559AE61934C2910051A6BE /* RBLScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBLScrolling.h; sourceTree = "<group>"; };
-		D4559AE71934C2910051A6BE /* RBLScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLScrolling.m; sourceTree = "<group>"; };
-		D4ACA4CA18DB95F900EBD899 /* libExpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libExpecta.a; path = External/expecta/build/Debug/libExpecta.a; sourceTree = "<group>"; };
-		D4ACA4CC18DB95FC00EBD899 /* libSpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSpecta.a; path = External/specta/build/Debug/libSpecta.a; sourceTree = "<group>"; };
 		F63D7C77171D31010006515F /* RBLResizableImageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBLResizableImageSpec.m; sourceTree = "<group>"; };
 		F63D7C79171D3CCB0006515F /* <RBLResizableImageSpec>_testimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "<RBLResizableImageSpec>_testimage@2x.png"; sourceTree = "<group>"; };
 		F63D7C7A171D3CCB0006515F /* <RBLResizableImageSpec>_testimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "<RBLResizableImageSpec>_testimage.png"; sourceTree = "<group>"; };
@@ -195,17 +272,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01A4A28162C81EE0092D61F /* libExpecta.a in Frameworks */,
+				D01A4A29162C81EE0092D61F /* libSpecta.a in Frameworks */,
 				301569981602161400E3BE46 /* QuartzCore.framework in Frameworks */,
+				D09AE4F915C5F45300ECAD10 /* SenTestingKit.framework in Frameworks */,
 				D09AE4FA15C5F45300ECAD10 /* Cocoa.framework in Frameworks */,
 				D09AE4FD15C5F45300ECAD10 /* Rebel.framework in Frameworks */,
-				BE17699A1975D93900EE78ED /* libSpecta-OSX.a in Frameworks */,
-				D4ACA4CB18DB95F900EBD899 /* libExpecta.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		304692E71607258E00B79746 /* libextobjc */ = {
+			isa = PBXGroup;
+			children = (
+				304692F11607259A00B79746 /* EXTKeyPathCoding.h */,
+			);
+			name = libextobjc;
+			path = External/libextobjc;
+			sourceTree = "<group>";
+		};
+		D01A4A05162C81CC0092D61F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D01A4A0C162C81CC0092D61F /* libExpecta.a */,
+				D01A4A0E162C81CC0092D61F /* libExpecta-iOS.a */,
+				D01A4A10162C81CC0092D61F /* ExpectaTests.octest */,
+				D01A4A12162C81CC0092D61F /* Expecta-iOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D01A4A16162C81D60092D61F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D01A4A1D162C81D60092D61F /* libSpecta.a */,
+				D01A4A1F162C81D60092D61F /* libSpecta-iOS.a */,
+				D01A4A21162C81D60092D61F /* SpectaTests.octest */,
+				D01A4A23162C81D60092D61F /* Specta-iOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D0723FBD15C5F9CD004DBDC7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,10 +326,14 @@
 				D0E91C571603CC7600D23E93 /* RBLClipView.m */,
 				D0723FE115C616AF004DBDC7 /* RBLResizableImage.h */,
 				D0723FE215C616AF004DBDC7 /* RBLResizableImage.m */,
+				D0723FBE15C5F9D8004DBDC7 /* RBLView.h */,
+				D0723FBF15C5F9D8004DBDC7 /* RBLView.m */,
 				306A81D91601C7A300BF45F3 /* RBLPopover.h */,
 				306A81DA1601C7A300BF45F3 /* RBLPopover.m */,
 				AB61F63416373FE000DD5D2C /* RBLTableCellView.h */,
 				AB61F63516373FE000DD5D2C /* RBLTableCellView.m */,
+				B85EE8DC163ECA8C00265870 /* RBLViewController.h */,
+				B85EE8DD163ECA8C00265870 /* RBLViewController.m */,
 				AB10DB4B166EA9CA00AB7AB1 /* RBLScrollView.h */,
 				AB10DB4C166EA9CA00AB7AB1 /* RBLScrollView.m */,
 				303DEF4216D2B88700BD65C4 /* RBLShadowedTextFieldCell.h */,
@@ -229,10 +342,6 @@
 				88347E6916F213C500872A0A /* RBLHTMLView.m */,
 				30309E8B17228C1700BC2923 /* RBLTableView.h */,
 				30309E8C17228C1700BC2923 /* RBLTableView.m */,
-				D419E3B5193392AD00F77217 /* RBLOutlineView.h */,
-				D419E3B6193392AD00F77217 /* RBLOutlineView.m */,
-				D4559AE61934C2910051A6BE /* RBLScrolling.h */,
-				D4559AE71934C2910051A6BE /* RBLScrolling.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -256,6 +365,8 @@
 				D0410EAA15C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.m */,
 				D04CBFC615F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h */,
 				D04CBFC715F6D87B004A5BCC /* NSView+RBLAnimationAdditions.m */,
+				B85EE8E7163ECF4B00265870 /* NSView+RBLViewControllerAdditions.h */,
+				B85EE8E8163ECF4C00265870 /* NSView+RBLViewControllerAdditions.m */,
 				B85EE8EB163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h */,
 				B85EE8EC163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m */,
 				0396050816E2DBA7007A5542 /* NSView+RBLAlignmentAdditions.h */,
@@ -267,6 +378,7 @@
 		D0723FDA15C60815004DBDC7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */,
 				306A81EA1601EAE700BF45F3 /* CAAnimation+RBLBlockAdditionsSpec.m */,
 				D03D671A1677E2950041DDF2 /* NSAttributedString+RBLHTMLAdditionsSpec.m */,
 				D0723FDB15C60846004DBDC7 /* NSColor+RBLCGColorAdditionsSpec.m */,
@@ -289,7 +401,7 @@
 				D08BB2E715CB307200CC9868 /* Mac OS X */,
 				D08BB2ED15CB307200CC9868 /* README.md */,
 			);
-			name = Configuration;
+			path = Configuration;
 			path = External/xcconfigs;
 			sourceTree = "<group>";
 		};
@@ -360,7 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				D09AE4DF15C5F45200ECAD10 /* Rebel.framework */,
-				D09AE4F715C5F45300ECAD10 /* RebelTests.xctest */,
+				D09AE4F715C5F45300ECAD10 /* RebelTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -368,11 +480,12 @@
 		D09AE4E115C5F45200ECAD10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE1769991975D93900EE78ED /* libSpecta-OSX.a */,
-				D4ACA4CC18DB95FC00EBD899 /* libSpecta.a */,
-				D4ACA4CA18DB95F900EBD899 /* libExpecta.a */,
+				304692E71607258E00B79746 /* libextobjc */,
+				D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */,
+				D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */,
 				306A81EC1601F44200BF45F3 /* QuartzCore.framework */,
 				D09AE4E215C5F45200ECAD10 /* Cocoa.framework */,
+				D09AE4F815C5F45300ECAD10 /* SenTestingKit.framework */,
 				D0E91C5A1603CDC300D23E93 /* QuartzCore.framework */,
 				88347E7216F2145900872A0A /* WebKit.framework */,
 				D09AE4E415C5F45200ECAD10 /* Other Frameworks */,
@@ -424,6 +537,7 @@
 		D09AE4FF15C5F45300ECAD10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0723FDD15C60D61004DBDC7 /* testimage.jpg */,
 				D09AE50015C5F45300ECAD10 /* RebelTests-Info.plist */,
 				D09AE50115C5F45300ECAD10 /* InfoPlist.strings */,
 				D04844EC15C5F8DA00834EDE /* RebelTests-Prefix.pch */,
@@ -449,21 +563,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0723FC215C5FA13004DBDC7 /* Rebel.h in Headers */,
+				D0723FC015C5F9D8004DBDC7 /* RBLView.h in Headers */,
 				D0723FC615C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.h in Headers */,
 				D0723FE315C616AF004DBDC7 /* RBLResizableImage.h in Headers */,
 				D04CBFC815F6D87B004A5BCC /* NSView+RBLAnimationAdditions.h in Headers */,
 				306A81E81601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.h in Headers */,
 				306A81DB1601C7A300BF45F3 /* RBLPopover.h in Headers */,
+				304692F21607259A00B79746 /* EXTKeyPathCoding.h in Headers */,
 				D0E91C581603CC7600D23E93 /* RBLClipView.h in Headers */,
 				D011FD5E16239A8600A27946 /* NSImage+RBLResizableImageAdditions.h in Headers */,
 				AB61F63616373FE000DD5D2C /* RBLTableCellView.h in Headers */,
+				B85EE8DE163ECA8C00265870 /* RBLViewController.h in Headers */,
 				F64F8DEA1797E1F400082A3F /* RBLSlidingContainerView.h in Headers */,
 				F6A562C01797DC5A00B651C0 /* RBLExpandingContainerView.h in Headers */,
-				D4559AE81934C2910051A6BE /* RBLScrolling.h in Headers */,
+				B85EE8E9163ECF4C00265870 /* NSView+RBLViewControllerAdditions.h in Headers */,
 				B85EE8ED163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.h in Headers */,
 				AB61F6D41638370900DD5D2C /* NSApplication+RBLBlockAdditions.h in Headers */,
 				88347E6A16F213C500872A0A /* RBLHTMLView.h in Headers */,
-				D419E3B7193392AD00F77217 /* RBLOutlineView.h in Headers */,
 				AB10DB4D166EA9CA00AB7AB1 /* RBLScrollView.h in Headers */,
 				30309E8D17228C1700BC2923 /* RBLTableView.h in Headers */,
 				303DEF4416D2B88700BD65C4 /* RBLShadowedTextFieldCell.h in Headers */,
@@ -501,16 +617,19 @@
 				D09AE4F215C5F45300ECAD10 /* Sources */,
 				D09AE4F315C5F45300ECAD10 /* Frameworks */,
 				D09AE4F415C5F45300ECAD10 /* Resources */,
+				D09AE4F515C5F45300ECAD10 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D01A4A25162C81E90092D61F /* PBXTargetDependency */,
+				D01A4A27162C81E90092D61F /* PBXTargetDependency */,
 				D09AE4FC15C5F45300ECAD10 /* PBXTargetDependency */,
 			);
 			name = RebelTests;
 			productName = RebelTests;
-			productReference = D09AE4F715C5F45300ECAD10 /* RebelTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			productReference = D09AE4F715C5F45300ECAD10 /* RebelTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -518,8 +637,7 @@
 		D09AE4D515C5F45200ECAD10 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = GitHub;
 			};
 			buildConfigurationList = D09AE4D815C5F45200ECAD10 /* Build configuration list for PBXProject "Rebel" */;
@@ -532,6 +650,16 @@
 			mainGroup = D09AE4D315C5F45200ECAD10;
 			productRefGroup = D09AE4E015C5F45200ECAD10 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D01A4A05162C81CC0092D61F /* Products */;
+					ProjectRef = D08BB2EE15CB307D00CC9868 /* Expecta.xcodeproj */;
+				},
+				{
+					ProductGroup = D01A4A16162C81D60092D61F /* Products */;
+					ProjectRef = D08BB2F115CB307D00CC9868 /* Specta.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D09AE4DE15C5F45200ECAD10 /* Rebel */,
@@ -539,6 +667,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D01A4A0C162C81CC0092D61F /* libExpecta.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libExpecta.a;
+			remoteRef = D01A4A0B162C81CC0092D61F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D01A4A0E162C81CC0092D61F /* libExpecta-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libExpecta-iOS.a";
+			remoteRef = D01A4A0D162C81CC0092D61F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D01A4A10162C81CC0092D61F /* ExpectaTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ExpectaTests.octest;
+			remoteRef = D01A4A0F162C81CC0092D61F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D01A4A12162C81CC0092D61F /* Expecta-iOSTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Expecta-iOSTests.octest";
+			remoteRef = D01A4A11162C81CC0092D61F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D01A4A1D162C81D60092D61F /* libSpecta.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSpecta.a;
+			remoteRef = D01A4A1C162C81D60092D61F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D01A4A1F162C81D60092D61F /* libSpecta-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSpecta-iOS.a";
+			remoteRef = D01A4A1E162C81D60092D61F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D01A4A21162C81D60092D61F /* SpectaTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SpectaTests.octest;
+			remoteRef = D01A4A20162C81D60092D61F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D01A4A23162C81D60092D61F /* Specta-iOSTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Specta-iOSTests.octest";
+			remoteRef = D01A4A22162C81D60092D61F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D09AE4DD15C5F45200ECAD10 /* Resources */ = {
@@ -562,23 +749,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D09AE4F515C5F45300ECAD10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D09AE4DA15C5F45200ECAD10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0723FC115C5F9D8004DBDC7 /* RBLView.m in Sources */,
 				D0723FC715C5FB68004DBDC7 /* NSColor+RBLCGColorAdditions.m in Sources */,
 				D0723FE415C616AF004DBDC7 /* RBLResizableImage.m in Sources */,
 				D0410EAC15C61895003A3203 /* NSTextView+RBLAntialiasingAdditions.m in Sources */,
 				D04CBFC915F6D87B004A5BCC /* NSView+RBLAnimationAdditions.m in Sources */,
 				306A81DC1601C7A300BF45F3 /* RBLPopover.m in Sources */,
-				D419E3B8193392AD00F77217 /* RBLOutlineView.m in Sources */,
 				306A81E91601E92000BF45F3 /* CAAnimation+RBLBlockAdditions.m in Sources */,
 				D0E91C591603CC7600D23E93 /* RBLClipView.m in Sources */,
 				D011FD5F16239A8600A27946 /* NSImage+RBLResizableImageAdditions.m in Sources */,
 				AB61F63716373FE000DD5D2C /* RBLTableCellView.m in Sources */,
 				F64F8DEB1797E1F400082A3F /* RBLSlidingContainerView.m in Sources */,
-				D4559AE91934C2910051A6BE /* RBLScrolling.m in Sources */,
+				B85EE8DF163ECA8C00265870 /* RBLViewController.m in Sources */,
+				B85EE8EA163ECF4C00265870 /* NSView+RBLViewControllerAdditions.m in Sources */,
 				B85EE8EE163EE15800265870 /* NSObject+RBObjectSizzlingAdditions.m in Sources */,
 				AB61F6D51638370900DD5D2C /* NSApplication+RBLBlockAdditions.m in Sources */,
 				AB10DB4E166EA9CA00AB7AB1 /* RBLScrollView.m in Sources */,
@@ -612,6 +816,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D01A4A25162C81E90092D61F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Expecta;
+			targetProxy = D01A4A24162C81E90092D61F /* PBXContainerItemProxy */;
+		};
+		D01A4A27162C81E90092D61F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Specta;
+			targetProxy = D01A4A26162C81E90092D61F /* PBXContainerItemProxy */;
+		};
 		D09AE4FC15C5F45300ECAD10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D09AE4DE15C5F45200ECAD10 /* Rebel */;
@@ -643,8 +857,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2DE15CB307200CC9868 /* Profile.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -654,12 +869,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREFIX_HEADER = "Rebel/Rebel-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Rebel/Rebel-Info.plist";
+				INSTALL_PATH = "@loader_path/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Profile;
@@ -668,10 +893,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2E815CB307200CC9868 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"$(inherited)",
-				);
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "RebelTests/RebelTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/specta/src,
@@ -680,6 +903,7 @@
 				INFOPLIST_FILE = "RebelTests/RebelTests-Info.plist";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Profile;
 		};
@@ -687,8 +911,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2DD15CB307200CC9868 /* Debug.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -698,8 +923,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2DF15CB307200CC9868 /* Release.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -709,12 +935,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREFIX_HEADER = "Rebel/Rebel-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Rebel/Rebel-Info.plist";
+				INSTALL_PATH = "@loader_path/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -723,12 +959,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2EB15CB307200CC9868 /* Mac-Framework.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PREFIX_HEADER = "Rebel/Rebel-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Rebel/Rebel-Info.plist";
+				INSTALL_PATH = "@loader_path/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -737,10 +983,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2E815CB307200CC9868 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"$(inherited)",
-				);
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "RebelTests/RebelTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/specta/src,
@@ -749,6 +993,7 @@
 				INFOPLIST_FILE = "RebelTests/RebelTests-Info.plist";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -756,10 +1001,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D08BB2E815CB307200CC9868 /* Mac-Application.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"$(inherited)",
-				);
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PREFIX_HEADER = "RebelTests/RebelTests-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					External/specta/src,
@@ -768,6 +1011,7 @@
 				INFOPLIST_FILE = "RebelTests/RebelTests-Info.plist";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
