@@ -34,13 +34,13 @@
 // Whether the view's drawing completely fills its bounds with opaque content.
 //
 // Defaults to NO.
-@property (nonatomic, assign, getter = isOpaque) BOOL opaque;
+@property (getter = isOpaque) BOOL opaque;
 
 // Whether the view's drawing and layout uses a flipped (top-left origin)
 // coordinate system.
 //
 // Defaults to NO.
-@property (nonatomic, assign, getter = isFlipped) BOOL flipped;
+@property (getter = isFlipped) BOOL flipped;
 
 // Whether the graphics context for the view's drawing should be cleared to
 // transparent black in RBLView's implementation of -drawRect:.
@@ -58,7 +58,7 @@
 // the backing layer to support scaling, and then change the value of this
 // property to NSViewLayerContentsRedrawBeforeViewResize or
 // NSViewLayerContentsRedrawOnSetNeedsDisplay.
-@property (nonatomic, assign) NSViewLayerContentsRedrawPolicy layerContentsRedrawPolicy;
+@property (assign) NSViewLayerContentsRedrawPolicy layerContentsRedrawPolicy;
 
 // A prerendered image to use as the content for this view. This property is
 // not the same as CALayer.contents, but does manipulate it.
